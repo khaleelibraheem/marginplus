@@ -38,7 +38,7 @@ export default function FooterSection() {
                 width={20}
               />
               <Image
-                src={"/images/linkedin.svg"}
+                src={"/images/linked.svg"}
                 alt="icon"
                 height={20}
                 width={20}
