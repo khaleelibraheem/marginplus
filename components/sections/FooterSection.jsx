@@ -7,7 +7,7 @@ export default function FooterSection() {
         <div className="flex md:justify-between md:gap-9 flex-wrap md:flex-nowrap gap-4">
           <div>
             <Image
-              src={"../../images/logo.svg"}
+              src={"/images/logo.svg"}
               alt="logo"
               width={150}
               height={150}
@@ -20,25 +20,25 @@ export default function FooterSection() {
             <p className="mt-4">+234-701447-0953</p>
             <div className="flex gap-5 mt-4 mb-5 md:mb-2">
               <Image
-                src={"../../images/facebook.svg"}
+                src={"/images/facebook.svg"}
                 alt="icon"
                 height={20}
                 width={20}
               />
               <Image
-                src={"../../images/x.svg"}
+                src={"/images/x.svg"}
                 alt="icon"
                 height={20}
                 width={20}
               />
               <Image
-                src={"../../images/instagram.svg"}
+                src={"/images/instagram.svg"}
                 alt="icon"
                 height={20}
                 width={20}
               />
               <Image
-                src={"../../images/linkedin.svg"}
+                src={"/images/linkedin.svg"}
                 alt="icon"
                 height={20}
                 width={20}
