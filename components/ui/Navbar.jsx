@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <div className="relative">
-      <nav className="flex justify-between items-center py-4 px-6">
+      <nav className="flex justify-between items-center">
         <Image
           src="/images/logo.svg"
           width={100}
