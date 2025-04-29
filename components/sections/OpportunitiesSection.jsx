@@ -1,10 +1,11 @@
 import OpportunitiesCard from "../ui/OpportunitiesCard";
-import SectionTitle from "../ui/SectionTitle";
 
 export default function OpportunitiesSection() {
   return (
     <section className="px-3 md:px-10 max-w-[1400px] mx-auto">
-      <SectionTitle text={"Diverse Investment Opportunities"} />
+        <h2 className="text-[#014F2A] text-center mt-4 sm:mt-8 font-bold text-[22px] sm:text-[26px]">
+        Diverse Investment Opportunities
+      </h2>
       <div className="mt-6 flex flex-col sm:flex-row gap-5">
         <OpportunitiesCard
           title={"Crop Farming"}
@@ -13,7 +14,6 @@ export default function OpportunitiesSection() {
           }
           bgColor={"#014F2A"}
           imgSrc={"/images/corn-grass.svg"}
-          ImageSize={100}
           textColor={"white"}
         />
         <OpportunitiesCard
@@ -23,7 +23,6 @@ export default function OpportunitiesSection() {
           }
           bgColor={"#008647"}
           imgSrc={"/images/cow.svg"}
-          ImageSize={150}
           textColor={"white"}
         />
         <OpportunitiesCard
@@ -33,7 +32,6 @@ export default function OpportunitiesSection() {
           }
           bgColor={"#B2FF96"}
           imgSrc={"/images/factory.svg"}
-          ImageSize={120}
           textColor={"#014F2A"}
         />
       </div>

@@ -5,20 +5,29 @@ export default function OpportunitiesCard({
   imgSrc,
   title,
   description,
-  ImageSize,
   textColor
 }) {
+
+  const standardImageSize = 80;
+
   return (
     <div
       className="flex sm:flex-col gap-4 p-4 pb-8 w-full sm:w-[270px] rounded-xl flex-1"
       style={{ backgroundColor: bgColor }}
     >
-      <div className="flex justify-center">
-        <Image src={imgSrc} width={ImageSize} height={ImageSize} alt="cardimg" />
+      <div className="flex mx-auto justify-center items-center h-[80px] w-[180px]">
+        <Image 
+          src={imgSrc} 
+          width={standardImageSize} 
+          height={standardImageSize} 
+          alt={`${title} icon`}
+          className="object-contain w-full h-full" 
+        
+        />
       </div>
       <div className="flex flex-col justify-center sm:items-center" style={{color: textColor}}>
         <h3 className="font-bold text-lg">{title}</h3>
-        <p className="sm:text-center">{description}</p>
+        <p className="text-[13px] sm:text-[16px] sm:text-center">{description}</p>
       </div>
     </div>
   );

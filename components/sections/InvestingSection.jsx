@@ -14,10 +14,10 @@ export default function InvestingSection() {
 
       <div className="relative z-10 flex justify-center items-center h-full">
         <div className="px-4">
-          <h3 className="text-[38px] leading-10 sm:leading-14 tracking-wide md:text-5xl font-bold text-white text-center mb-6">
+          <h3 className="text-[35px] leading-10 sm:leading-14 tracking-wide md:text-5xl font-bold text-white text-center mb-6">
             You are investing in <br /> Africa&apos;s Future!
           </h3>
-          <p className="max-w-md font-semibold text-center text-[20px] sm:text-[21px] leading-6 sm:leading-8 sm:text-lg">
+          <p className="max-w-md font-semibold text-center text-[18px] sm:text-[21px] leading-6 sm:leading-8 sm:text-lg">
             Every investment you make fuels the future by supporting farmers,
             businesses and sustainable wealth creation
           </p>

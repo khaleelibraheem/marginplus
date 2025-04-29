@@ -2,6 +2,25 @@ import Image from "next/image";
 import AppDownloadButton from "../ui/AppDownloadButton";
 import Avatars from "../ui/Avatars";
 
+const avatars = [
+  {
+    imageUrl: "https://avatars.githubusercontent.com/u/16860528",
+    profileUrl: "#",
+  },
+  {
+    imageUrl: "https://avatars.githubusercontent.com/u/20110627",
+    profileUrl: "#",
+  },
+  {
+    imageUrl: "https://avatars.githubusercontent.com/u/106103625",
+    profileUrl: "#",
+  },
+  {
+    imageUrl: "https://avatars.githubusercontent.com/u/59228569",
+    profileUrl: "#",
+  },
+];
+
 export default function AppDownloadSection() {
   return (
     <section className="mt-16 sm:mt-60 flex flex-col md:flex-row justify-center bg-transparent md:bg-[#004D2E] items-center md:h-[300px] md:items-end md:gap-14">
@@ -14,12 +33,13 @@ export default function AppDownloadSection() {
         />
       </div>
       <div className="bg-[#004D2E] self-start p-5 md:max-w-[450px]">
-        <h3 className="text-2xl font-semibold text-white">
-          Thousands of Africans are already transforming their financial future <br />
+        <h3 className="text-2xl leading-7 font-semibold text-white">
+          Thousands of Africans are already transforming their financial future{" "}
+          <br />
           <span className="text-[#B2FF96]">with Marginplus.</span>
         </h3>
         <div className="mt-2 mb-3 md:mt-6">
-        <Avatars />
+          <Avatars avatarUrls={avatars} numPeople={99} />
         </div>
         <div className="flex gap-3 mt-2 md:mt-6">
           <AppDownloadButton
