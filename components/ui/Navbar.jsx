@@ -30,7 +30,7 @@ export default function Navbar() {
     <div className="relative">
       <nav className="flex justify-between items-center">
         <Image
-          src="/images/logo.svg"
+          src="/images/logo.png"
           width={100}
           height={100}
           alt="logo"

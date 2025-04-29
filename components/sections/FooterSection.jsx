@@ -7,7 +7,7 @@ export default function FooterSection() {
         <div className="flex md:justify-between md:gap-9 flex-wrap md:flex-nowrap gap-4">
           <div>
             <Image
-              src={"/images/logo.svg"}
+              src={"/images/logo.png"}
               alt="logo"
               width={150}
               height={150}

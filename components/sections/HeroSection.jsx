@@ -13,13 +13,13 @@ export default function HeroSection() {
         {/* Hero-left */}
         <div className="max-w-[460px] mt-14 sm:mt-10 flex-1">
           <div>
-            <h1 className="text-[45px] text-center sm:text-start sm:text-[52px] lg:text-7xl leading-[46px] md:leading-[50px] lg:leading-[65px] tracking-tight font-[900] text-[#014F2A]">
+            <h1 className="text-[42px] text-center sm:text-start sm:text-[52px] lg:text-7xl leading-[46px] md:leading-[50px] lg:leading-[65px] tracking-tight font-[900] text-[#014F2A]">
               <span className="sm:block">Smart </span>
               <span className="sm:hidden">Investments in </span>
               <span className="hidden sm:block">Investments&nbsp;in </span>
               <span className="sm:block">Agriculture</span>
             </h1>
-            <p className="mt-2 sm:mt-5 font-bold sm:font-normal text-center sm:text-start text-[20px]">
+            <p className="mt-2 sm:mt-5 font-bold sm:font-normal text-center sm:text-start text-[16px]">
               Grow your wealth by investing in profitable, secure and
               Impact-driven ventures.
             </p>
