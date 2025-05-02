@@ -3,7 +3,7 @@ import Button from "../ui/Button";
 
 export default function FeaturedSection() {
   return (
-    <section>
+    <section className="mt-[-35px]">
       <div className="bg-[#A5F48D] py-4 flex justify-center items-center">
         <p className="text-[#008647] font-semibold mr-2 md:text-xl">
           Featured on:

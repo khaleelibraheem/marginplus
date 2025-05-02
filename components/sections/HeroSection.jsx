@@ -4,12 +4,12 @@ import AppDownloadButton from "../ui/AppDownloadButton";
 
 export default function HeroSection() {
   return (
-    <section className="md:mt-[-45px] relative px-3 sm:px-10 overflow-hidden pb-28 sm:pb-16 max-w-[1400px] mx-auto">
+    <section className="md:mt-[-45px] relative px-3 sm:px-10 overflow-hidden sm:pb-16 max-w-[1400px] mx-auto">
       {/* WaterMark */}
       <span className="absolute text-[370px] font-extrabold text-gray-100 z-0 select-none hidden lg:block top-7 left-[-25px]">
         Invest
       </span>
-      <div className="sm:mt-6 relative z-10 flex flex-col gap-18 lg:gap-8 sm:flex-row items-center sm:justify-between">
+      <div className="sm:mt-6 relative z-10 flex flex-col lg:gap-8 sm:flex-row items-center sm:justify-between">
         {/* Hero-left */}
         <div className="max-w-[460px] mt-14 sm:mt-10 flex-1">
           <div>
@@ -62,8 +62,17 @@ export default function HeroSection() {
           <div className="w-full h-full">
             {/* Mobile Hero Image */}
             <div className="sm:hidden">
-              <HeroImage />
+              <Image
+                src={"/images/hero-mobileimage.png"}
+                width={700}
+                height={700}
+                alt="hero-image"
+                priority
+                className="w-full h-auto object-contain"
+              />
             </div>
+
+            {/* Desktop Hero Image */}
             <Image
               src={"/images/hero-image.png"}
               width={700}

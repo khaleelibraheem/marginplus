@@ -2,13 +2,14 @@ import Image from "next/image";
 
 export default function InvestingSection() {
   return (
-    <section className="relative bg-[#67D99D] mt-20 py-12 h-[360px] sm:h-[355px] overflow-hidden">
+    <section className="relative bg-[#67D99D] mt-20 py-12 h-[375px] sm:h-[355px] overflow-hidden">
       <div className="absolute inset-0 flex justify-center items-center">
         <Image
           src="/images/mapofafrica.svg"
           height={400}
           width={400}
           alt="Map of Africa"
+          className="h-full mt-10"
         />
       </div>
 
