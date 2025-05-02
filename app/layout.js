@@ -54,8 +54,11 @@ const Gilroy = localFont({
 });
 
 export const metadata = {
-  title: "MarginPlus: Smartly Invest in Nigerian Agriculture",
+  title: "Marginplus: Smartly Invest in Nigerian Agriculture",
   description: "Secure, high-return agricultural investments in Nigeria. Our platform offers vetted opportunities with up to 35% returns, combining profit with impact.",
+  openGraph: {
+    images: 'https://marginplus.ng/og-marginplus.png',
+},
   keywords: [
     "Agricultural investment Nigeria", 
     "Invest in Nigerian agriculture",

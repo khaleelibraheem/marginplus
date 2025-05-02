@@ -31,8 +31,8 @@ export default function Navbar() {
       <nav className="flex justify-between items-center">
         <Image
           src="/images/logo.png"
-          width={100}
-          height={100}
+          width={150}
+          height={150}
           alt="logo"
           priority
         />

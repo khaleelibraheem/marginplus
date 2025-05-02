@@ -102,14 +102,14 @@ export default function FooterSection() {
             Marginplus is a leading crowdfunding investment platform in Nigeria
           </p>
           <p className="text-[13px] font-light text-[#014E2F]">
-            Mplus Finance Limited is duly licensed by the Securities and
+            Marginplus Finance Limited is duly licensed by the Securities and
             Exchange Commission (SEC) of Nigeria.{" "}
             <span className="font-semibold">
               <a href="#">Check here</a>
             </span>
           </p>
           <p className="text-[13px] font-light text-[#014E2F]">
-            2024-2025 Marginplus Technologies Ltd - RC 123432
+            2024-2025 Marginplus Technologies Ltd - RC 773240
           </p>
         </div>
       </div>
