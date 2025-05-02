@@ -34,25 +34,25 @@ export default function BackedBySection() {
 
       <div className="mt-4 md:mt-6 flex justify-center gap-3 md:gap-6">
         <Image
-          src="/images/nirsal-logo.svg"
+          src="/images/nirsal-logo.png"
           alt="NIRSAL logo"
           width={100}
           height={100}
-          className="w-[120px] h-auto md:w-[150px]"
+          className="w-[100px] h-[60px] md:w-[150px] md:h-[80px]"
         />
         <Image
-          src="/images/fmard-logo.svg"
+          src="/images/fmard-logo.png"
           alt="FMARD logo"
           width={100}
           height={100}
-          className="w-[120px] h-auto md:w-[150px]"
+          className="w-[150px] h-[60px] md:w-[200px] md:h-[80px]"
         />
         <Image
-          src="/images/jaiz-logo.svg"
+          src="/images/jaiz-logo.png"
           alt="Jaiz logo"
           width={100}
           height={100}
-          className="w-[120px] h-auto md:w-[150px]"
+          className="w-[100px] h-[60px] md:w-[150px] md:h-[80px]"
         />
       </div>
     </section>

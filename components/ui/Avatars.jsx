@@ -5,7 +5,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Avatars({ numPeople, className, avatarUrls }) {
+export default function Avatars({className, avatarUrls }) {
   return (
     <div
       className={classNames(
@@ -22,7 +22,7 @@ export default function Avatars({ numPeople, className, avatarUrls }) {
             rel="noopener noreferrer"
           >
             <img
-              className="h-10 w-10 rounded-full border-1 border-white"
+              className="h-11 w-11 rounded-full border-1 border-white object-cover"
               src={url.imageUrl}
               width={40}
               height={40}
@@ -32,7 +32,7 @@ export default function Avatars({ numPeople, className, avatarUrls }) {
         ))}
 
       <a
-        className="flex h-10 w-10 items-center justify-center rounded-full border-1 border-white bg-[#B2FF96] text-center text-xs font-bold text-[#004D2E]"
+        className="flex h-11 w-11 items-center justify-center rounded-full border-1 border-white bg-[#B2FF96] text-center text-sm font-bold text-[#004D2E]"
         href="#"
       >
         5K+

@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HeroImage() {
   return (
     <div className="flex justify-center mt-20">
-      <div className="h-[215px] w-[215px] bg-[#A5F48D] rounded-full relative scale-160 sm:scale-140 md:scale-160 lg:scale-170">
+      <div className="h-[215px] w-[215px] bg-[#A5F48D] rounded-full relative scale-150 sm:scale-140 md:scale-160 lg:scale-170">
         <Image
           src={"/images/arrowbody.svg"}
           alt="arrrowbody"
@@ -17,7 +17,17 @@ export default function HeroImage() {
           alt="arrowhead"
           height={20}
           width={20}
-          className="absolute left-[207px] top-[10px] scale-200"
+          className="hidden sm:block absolute left-[207px] top-[10px] scale-200"
+          priority
+        />
+        
+        {/* Mobile Arrow Head */}
+         <Image
+          src={"/images/arrowhead.png"}
+          alt="arrowhead"
+          height={20}
+          width={20}
+          className="sm:hidden absolute left-[205px] top-[10px] scale-170"
           priority
         />
         <Image
@@ -37,7 +47,7 @@ export default function HeroImage() {
           priority
         />
         <Image
-          src={"/images/phonemockup.svg"}
+          src={"/images/phone-mockup.png"}
           alt="phonemockup"
           height={500}
           width={500}

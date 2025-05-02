@@ -15,18 +15,21 @@ export default function FeaturedSection() {
             alt="company"
             height={120}
             width={120}
+            priority
           />
           <Image
             src={"/images/bbc-logo.svg"}
             alt="company"
             height={60}
             width={60}
+            priority
           />
           <Image
             src={"/images/blogx-logo.svg"}
             alt="company"
             height={50}
             width={50}
+            priority
           />
         </div>
 
@@ -37,24 +40,28 @@ export default function FeaturedSection() {
             alt="company"
             height={150}
             width={150}
+            priority
           />
           <Image
             src={"/images/bbc-logo.svg"}
             alt="company"
             height={90}
             width={90}
+            priority
           />
           <Image
             src={"/images/blogx-logo.svg"}
             alt="company"
             height={80}
             width={80}
+            priority
           />
           <Image
             src={"/images/techsomia-logo.svg"}
             alt="company"
             height={140}
             width={140}
+            priority
             className="hidden md:block"
           />
         </div>
@@ -73,6 +80,7 @@ export default function FeaturedSection() {
                   alt="verify"
                   width={20}
                   height={20}
+                  priority
                 />
                 <p>
                   Earn &nbsp;
@@ -88,6 +96,7 @@ export default function FeaturedSection() {
                   alt="verify"
                   width={20}
                   height={20}
+                  priority
                 />
                 <p>Secure, transparent, and hassle-free</p>
               </li>
@@ -98,6 +107,7 @@ export default function FeaturedSection() {
                   width={20}
                   height={20}
                   className="mt-1"
+                  priority
                 />
                 <p>
                   Vetted opportunities to build wealth <br /> and drive impact
@@ -118,6 +128,7 @@ export default function FeaturedSection() {
               alt="check"
               width={250}
               height={250}
+              priority
             />
           </div>
         </div>

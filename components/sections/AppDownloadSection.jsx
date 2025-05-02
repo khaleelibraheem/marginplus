@@ -4,29 +4,29 @@ import Avatars from "../ui/Avatars";
 
 const avatars = [
   {
-    imageUrl: "https://avatars.githubusercontent.com/u/16860528",
+    imageUrl: "/images/avatar-1.jpg",
     profileUrl: "#",
   },
   {
-    imageUrl: "https://avatars.githubusercontent.com/u/20110627",
+    imageUrl: "/images/avatar-2.jpg",
     profileUrl: "#",
   },
   {
-    imageUrl: "https://avatars.githubusercontent.com/u/106103625",
+    imageUrl: "/images/avatar-3.jpg",
     profileUrl: "#",
   },
   {
-    imageUrl: "https://avatars.githubusercontent.com/u/59228569",
+    imageUrl: "/images/avatar-4.jpg",
     profileUrl: "#",
   },
 ];
 
 export default function AppDownloadSection() {
   return (
-    <section className="mt-16 sm:mt-60 flex flex-col md:flex-row justify-center bg-transparent md:bg-[#004D2E] items-center md:h-[300px] md:items-end md:gap-14">
+    <section className="mt-16 sm:mt-60 flex flex-col md:flex-row justify-center bg-transparent md:bg-[#004D2E] items-center md:h-[300px] md:items-end md:gap-2">
       <div>
         <Image
-          src={"/images/phone-mockup2.svg"}
+          src={"/images/phone-mockup2.png"}
           alt="iphone"
           height={300}
           width={300}
@@ -39,7 +39,7 @@ export default function AppDownloadSection() {
           <span className="text-[#B2FF96]">with Marginplus.</span>
         </h3>
         <div className="mt-2 mb-3 md:mt-6">
-          <Avatars avatarUrls={avatars} numPeople={99} />
+          <Avatars avatarUrls={avatars} />
         </div>
         <div className="flex gap-3 mt-2 md:mt-6">
           <AppDownloadButton
