@@ -2,11 +2,11 @@ import OpportunitiesCard from "../ui/OpportunitiesCard";
 
 export default function OpportunitiesSection() {
   return (
-    <section className="px-3 md:px-10 max-w-[1400px] mx-auto">
-        <h2 className="text-[#014F2A] text-center mt-4 sm:mt-8 font-bold text-[22px] sm:text-[26px]">
+    <section className="mt-10 px-3 md:px-10 max-w-[1400px] mx-auto">
+        <h2 className="text-[#014F2A] text-center font-bold text-[22px] sm:text-[26px]">
         Diverse Investment Opportunities
       </h2>
-      <div className="mt-6 flex flex-col sm:flex-row gap-5">
+      <div className="mt-6 flex flex-col md:flex-row gap-5">
         <OpportunitiesCard
           title={"Crop Farming"}
           description={

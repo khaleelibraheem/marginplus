@@ -12,7 +12,7 @@ export default function OpportunitiesCard({
 
   return (
     <div
-      className="flex sm:flex-col gap-4 p-4 pb-8 w-full sm:w-[270px] rounded-xl flex-1"
+      className="flex md:flex-col gap-4 p-4 pb-8 w-full md:w-[270px] rounded-xl flex-1"
       style={{ backgroundColor: bgColor }}
     >
       <div className="flex mx-auto justify-center items-center h-[80px] w-[180px]">
@@ -25,9 +25,9 @@ export default function OpportunitiesCard({
         
         />
       </div>
-      <div className="flex flex-col justify-center sm:items-center" style={{color: textColor}}>
+      <div className="flex flex-col justify-center md:items-center" style={{color: textColor}}>
         <h3 className="font-bold text-lg">{title}</h3>
-        <p className="text-[13px] sm:text-[16px] sm:text-center">{description}</p>
+        <p className="text-[13px] sm:text-[16px] md:text-center">{description}</p>
       </div>
     </div>
   );

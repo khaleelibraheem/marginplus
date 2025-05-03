@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function BackedBySection() {
   return (
-    <section className="mt-16 max-w-[1400px] mx-auto px-7 mb-20 sm:mb-0">
+    <section className="mt-10 max-w-[1400px] mx-auto px-7">
       <h2 className="text-[#014F2A] text-center mt-4 sm:mt-8 font-bold text-[24px] sm:text-[26px]">
         Backed by Industry Leaders
       </h2>

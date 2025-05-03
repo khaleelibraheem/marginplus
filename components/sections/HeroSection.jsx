@@ -64,11 +64,11 @@ export default function HeroSection() {
             <div className="sm:hidden">
               <Image
                 src={"/images/hero-mobileimage.png"}
-                width={700}
-                height={700}
+                width={500}
+                height={500}
                 alt="hero-image"
                 priority
-                className="w-full h-auto object-contain"
+                className="w-full h-[500px] object-contain"
               />
             </div>
 
@@ -79,7 +79,7 @@ export default function HeroSection() {
               height={700}
               alt="hero-image"
               priority
-              className="hidden sm:block w-full h-auto object-contain"
+              className="hidden sm:block w-full sm:scale-140 md:scale-125 lg:scale-100 h-auto object-contain"
             />
           </div>
         </div>

@@ -23,7 +23,7 @@ const avatars = [
 
 export default function AppDownloadSection() {
   return (
-    <section className="mt-16 sm:mt-60 flex flex-col md:flex-row justify-center bg-transparent md:bg-[#004D2E] items-center md:h-[300px] md:items-end md:gap-2">
+    <section className="mt-10 flex flex-col md:flex-row justify-center bg-transparent md:bg-[#004D2E] items-center md:h-[300px] md:items-end md:gap-2">
       <div>
         <Image
           src={"/images/phone-mockup2.png"}
@@ -33,10 +33,12 @@ export default function AppDownloadSection() {
         />
       </div>
       <div className="bg-[#004D2E] self-start p-5 md:max-w-[450px]">
-        <h3 className="text-2xl leading-7 font-semibold text-white">
-          Thousands of Africans are already transforming their financial future{" "}
+        <h3 className="text-[21px] leading-8 font-semibold text-white">
+          Thousands of Africans are already transforming their financial future
+          with
+          <span className="sm:hidden text-[#B2FF96]"> Marginplus.</span>
           <br />
-          <span className="text-[#B2FF96]">with Marginplus.</span>
+          <span className="hidden sm:block text-[#B2FF96]"> Marginplus.</span>
         </h3>
         <div className="mt-2 mb-3 md:mt-6">
           <Avatars avatarUrls={avatars} />
