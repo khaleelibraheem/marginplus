@@ -33,12 +33,10 @@ export default function AppDownloadSection() {
         />
       </div>
       <div className="bg-[#004D2E] self-start p-5 md:max-w-[450px]">
-        <h3 className="text-[21px] leading-8 font-bold text-white">
+        <h3 className="text-2xl leading-7 font-semibold text-white">
           Thousands of Africans are already transforming their financial future
-          with
-          <span className="sm:hidden text-[#B2FF96]"> Marginplus.</span>
-          <br />
-          <span className="hidden sm:block text-[#B2FF96]"> Marginplus.</span>
+          <br /> with
+          <span className="text-[#B2FF96]"> Marginplus.</span>
         </h3>
         <div className="mt-2 mb-3 md:mt-6">
           <Avatars avatarUrls={avatars} />
