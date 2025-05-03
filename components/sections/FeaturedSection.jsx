@@ -68,7 +68,7 @@ export default function FeaturedSection() {
       </div>
 
       <div className="max-w-[1400px] mx-auto">
-        <div className="mx-3 md:mx-10 mt-10 rounded-2xl px-6 py-4 sm:px-12 sm:pt-12 sm:pb-8 bg-[#008647] flex justify-between">
+        <div className="mx-3 md:mx-10 mt-20 rounded-2xl px-6 py-4 sm:px-12 sm:pt-12 sm:pb-8 bg-[#008647] flex justify-between">
           <div className="text-white">
             <h2 className="text-[25px] sm:text-5xl font-bold">
               Invest with Confidence

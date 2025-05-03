@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FooterSection() {
   return (
-    <section className="px-6 pt-8 pb-14 md:py-14 md:px-10 bg-[#B2FF96] mt-10">
+    <section className="px-6 pt-8 pb-14 md:py-14 md:px-10 bg-[#B2FF96] mt-20">
       <div className="max-w-[1400px] mx-auto">
         <div className="flex md:justify-between md:gap-9 flex-wrap md:flex-nowrap gap-4">
           <div>
@@ -19,30 +20,48 @@ export default function FooterSection() {
             <p className="mt-5">hi@marginplus.ng</p>
             <p className="mt-4">+234-701447-0953</p>
             <div className="flex gap-5 mt-4 mb-5 md:mb-2">
-              <Image
-                src={"/images/facebook.svg"}
-                alt="icon"
-                height={20}
-                width={20}
-              />
-              <Image
-                src={"/images/x.svg"}
-                alt="icon"
-                height={20}
-                width={20}
-              />
-              <Image
-                src={"/images/instagram.svg"}
-                alt="icon"
-                height={20}
-                width={20}
-              />
-              <Image
-                src={"/images/linked.svg"}
-                alt="icon"
-                height={20}
-                width={20}
-              />
+              <Link
+                href={"https://www.facebook.com/marginplusgrp"}
+                target="_blank"
+              >
+                <Image
+                  src={"/images/facebook.svg"}
+                  alt="icon"
+                  height={20}
+                  width={20}
+                />
+              </Link>
+              <Link href={"https://x.com/marginplus_ng"} target="_blank">
+                <Image
+                  src={"/images/x.svg"}
+                  alt="icon"
+                  height={20}
+                  width={20}
+                />
+              </Link>
+              <Link
+                href={"https://www.instagram.com/marginplus_ng"}
+                target="_blank"
+              >
+                <Image
+                  src={"/images/instagram.svg"}
+                  alt="icon"
+                  height={20}
+                  width={20}
+                />
+              </Link>
+
+              <Link
+                href={"https://www.linkedin.com/company/marginplusgroup/"}
+                target="_blank"
+              >
+                <Image
+                  src={"/images/linked.svg"}
+                  alt="icon"
+                  height={20}
+                  width={20}
+                />
+              </Link>
             </div>
           </div>
           <div className="flex flex-wrap gap-7">

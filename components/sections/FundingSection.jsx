@@ -3,7 +3,7 @@ import Button from "../ui/Button";
 
 export default function FundingSection() {
   return (
-    <section className="md:px-30 xl:px-45 mt-10 flex flex-col-reverse items-center lg:justify-between lg:flex-row gap-8 lg:items-baseline-last max-w-[1400px] mx-auto">
+    <section className="md:px-30 xl:px-45 mt-20 flex flex-col-reverse items-center lg:justify-between lg:flex-row gap-8 lg:items-baseline-last max-w-[1400px] mx-auto">
       <div className="px-8 md:px-0 w-full lg:w-1/2 sm:max-w-[450px]">
         <h3 className="text-[#014F2A] leading-9 font-bold text-[33px] sm:text-3xl sm:leading-9">
           Need Funding for Your Agribusiness ?

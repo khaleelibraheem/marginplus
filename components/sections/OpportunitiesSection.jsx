@@ -2,7 +2,7 @@ import OpportunitiesCard from "../ui/OpportunitiesCard";
 
 export default function OpportunitiesSection() {
   return (
-    <section className="mt-10 px-3 md:px-10 max-w-[1400px] mx-auto">
+    <section className="mt-20 px-3 md:px-10 max-w-[1400px] mx-auto">
         <h2 className="text-[#014F2A] text-center font-bold text-[22px] sm:text-[26px]">
         Diverse Investment Opportunities
       </h2>

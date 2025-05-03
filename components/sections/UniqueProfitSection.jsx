@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function UniqueProfitSection() {
   return (
-    <section className="mt-10 max-w-[1400px] mx-auto">
+    <section className="mt-20 max-w-[1400px] mx-auto">
       <h2 className="text-[#014F2A] text-center font-bold text-[22px] sm:text-[26px]">
         Our Unique Profit Sharing Model
       </h2>
