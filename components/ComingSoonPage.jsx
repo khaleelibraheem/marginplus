@@ -9,12 +9,12 @@ export default function ComingSoonPage() {
             Coming Soon
           </div>
 
-          <h1 className="text-5xl sm:text-6xl font-black text-[#014F2A] leading-tight mb-6">
+          <h1 className="text-5xl leading-12 sm:text-6xl font-black text-[#014F2A] mb-6">
             We're Planting <br className="hidden sm:block" />
             Something Special
           </h1>
 
-          <p className="text-gray-700 text-lg mb-12 max-w-xl mx-auto">
+          <p className="text-gray-700 leading-6 text-lg mb-12 max-w-xl mx-auto">
             This page is currently under development. Please check back soon for
             updates or return to our homepage to explore other sections of our
             platform.

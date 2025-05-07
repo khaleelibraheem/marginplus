@@ -8,7 +8,7 @@ export default function FundingSection() {
         <h3 className="text-[#014F2A] leading-9 font-bold text-[33px] sm:text-3xl sm:leading-9">
           Need Funding for Your Agribusiness ?
         </h3>
-        <p className="mt-4 font-semibold text-[21px] sm:text-[24px] leading-7 sm:leading-7 lg:text-justify">
+        <p className="mt-4 font-medium text-[21px] sm:text-[24px] leading-7 sm:leading-7 lg:text-justify">
           Whether you&apos;re a smallholder farmer or scaling an agro-processing
           venture, Marginplus helps you connect with impact-driven investors
           ready to support your journey.

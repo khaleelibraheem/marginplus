@@ -1,11 +1,12 @@
-import AppDownloadSection from "@/components/sections/AppDownloadSection";
-import BackedBySection from "@/components/sections/BackedBySection";
-import FeaturedSection from "@/components/sections/FeaturedSection";
-import FundingSection from "@/components/sections/FundingSection";
-import HeroSection from "@/components/sections/HeroSection";
-import InvestingSection from "@/components/sections/InvestingSection";
-import OpportunitiesSection from "@/components/sections/OpportunitiesSection";
-import UniqueProfitSection from "@/components/sections/UniqueProfitSection";
+
+import AppDownloadSection from "@/components/AppDownloadSection";
+import BackedBySection from "@/components/LandingPageSections/BackedBySection";
+import FeaturedSection from "@/components/LandingPageSections/FeaturedSection";
+import FundingSection from "@/components/LandingPageSections/FundingSection";
+import HeroSection from "@/components/LandingPageSections/HeroSection";
+import InvestingSection from "@/components/LandingPageSections/InvestingSection";
+import OpportunitiesSection from "@/components/LandingPageSections/OpportunitiesSection";
+import UniqueProfitSection from "@/components/LandingPageSections/UniqueProfitSection";
 
 export default function page() {
   return (

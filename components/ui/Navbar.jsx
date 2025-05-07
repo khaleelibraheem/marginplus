@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
 const navlinks = [
   { linkName: "Why Us?", href: "/why-us" },
@@ -14,6 +15,7 @@ const navlinks = [
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
   
   useEffect(() => {
     const handleResize = () => {
@@ -47,7 +49,11 @@ export default function Navbar() {
         <div className="hidden sm:flex space-x-5 items-center">
           {navlinks.map((link) => (
             <Link
-              className="text-sm font-bold hover:text-emerald-700 transition-colors"
+              className={`text-sm font-medium transition-colors ${
+                pathname === link.href 
+                  ? "text-emerald-700" 
+                  : "hover:text-emerald-700"
+              }`}
               href={link.href}
               key={link.linkName}
             >
@@ -55,8 +61,8 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/get-started"
-            className="bg-[#014F2A] px-6 py-3 rounded-lg text-sm font-bold text-white hover:bg-emerald-800 transition-colors"
+            href="https://www.marginplus.ng/"
+            className={`bg-[#014F2A] px-6 py-3 rounded-lg text-sm font-bold text-white hover:bg-emerald-800 transition-colors`}
           >
             <span className="cursor-pointer">Get Started</span>
           </Link>
@@ -92,7 +98,11 @@ export default function Navbar() {
               <div className="flex flex-col space-y-6">
                 {navlinks.map((link) => (
                   <Link
-                    className="text-lg font-bold hover:text-emerald-700 transition-colors"
+                    className={`text-lg font-bold transition-colors ${
+                      pathname === link.href 
+                        ? "text-emerald-700 border-l-4 border-emerald-700 pl-2" 
+                        : "hover:text-emerald-700"
+                    }`}
                     href={link.href}
                     key={link.linkName}
                     onClick={handleLinkClick}
@@ -101,8 +111,8 @@ export default function Navbar() {
                   </Link>
                 ))}
                 <Link
-                  href="/get-started"
-                  className="bg-[#014F2A] px-6 py-3 rounded-lg text-lg font-bold text-white text-center hover:bg-emerald-800 transition-colors mt-4"
+                  href="https://www.marginplus.ng/"
+                  className={`bg-[#014F2A] px-6 py-3 rounded-lg text-lg font-bold text-white text-center hover:bg-emerald-800 transition-colors mt-4`}
                   onClick={handleLinkClick}
                 >
                   Get Started

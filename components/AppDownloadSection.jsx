@@ -1,6 +1,8 @@
 import Image from "next/image";
-import AppDownloadButton from "../ui/AppDownloadButton";
-import Avatars from "../ui/Avatars";
+
+
+import AppDownloadButton from "./ui/AppDownloadButton";
+import Avatars from "./ui/Avatars";
 
 const avatars = [
   {

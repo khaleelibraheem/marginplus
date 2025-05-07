@@ -10,11 +10,11 @@ export default function BackedBySection() {
 
       {/* Desktop Text */}
       <div className="hidden sm:flex flex-col gap-1">
-        <p className="bg-[#f2faf4] text-xl text-center max-w-[700px] mx-auto font-semibold">
+        <p className="bg-[#f2faf4] text-xl text-center max-w-[700px] mx-auto font-medium">
           We collaborated with trusted financial and agricultural institutions
           ensure
         </p>
-        <p className="bg-[#f2faf4] text-xl text-center max-w-[700px] mx-auto font-semibold">
+        <p className="bg-[#f2faf4] text-xl text-center max-w-[700px] mx-auto font-medium">
           secure and profitable investments
         </p>
       </div>

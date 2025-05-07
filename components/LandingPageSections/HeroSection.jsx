@@ -19,7 +19,7 @@ export default function HeroSection() {
               <span className="hidden sm:block">Investments&nbsp;in </span>
               <span className="sm:block">Agriculture</span>
             </h1>
-            <p className="mt-2 sm:mt-5 font-bold sm:font-normal text-center sm:text-start text-[16px]">
+            <p className="mt-2 sm:mt-5 font-medium text-center sm:text-start text-[16px]">
               Grow your wealth by investing in profitable, secure and
               Impact-driven ventures.
             </p>
@@ -37,7 +37,7 @@ export default function HeroSection() {
             </p>
           </div>
 
-          <p className="sm:mt-1 text-center sm:text-left text-[12px]">
+          <p className="sm:mt-1 text-center sm:text-left text-[12px] font-medium">
             We are SEC Licensed as a crowdfunding intermediary
           </p>
 

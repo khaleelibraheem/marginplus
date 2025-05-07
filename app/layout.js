@@ -1,7 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import HeaderSection from "@/components/sections/HeaderSection";
-import FooterSection from "@/components/sections/FooterSection";
+import HeaderSection from "@/components/HeaderSection";
+import FooterSection from "@/components/FooterSection";
+
 
 const Gilroy = localFont({
   src: [

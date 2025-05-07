@@ -6,7 +6,7 @@ export default function FooterSection() {
     <section className="px-6 pt-8 pb-14 md:py-14 md:px-10 bg-[#B2FF96]">
       <div className="max-w-[1400px] mx-auto">
         <div className="flex md:justify-between md:gap-9 flex-wrap md:flex-nowrap gap-4">
-          <div>
+          <div className="text-[#292C32] font-medium">
             <Image
               src={"/images/logo.png"}
               alt="logo"
@@ -64,7 +64,7 @@ export default function FooterSection() {
               </Link>
             </div>
           </div>
-          <div className="flex flex-wrap gap-7">
+          <div className="flex flex-wrap gap-7 font-medium text-[#292C32]">
             <div className="flex flex-col gap-3">
               <h4 className="font-semibold">Company</h4>
               <a href="#" className="text-sm">
@@ -91,7 +91,7 @@ export default function FooterSection() {
             </div>
             <div className="flex flex-col gap-3">
               <h4 className="font-semibold">Explore</h4>
-              <a href="#" className="text-sm">
+              <a href="https://t.me/+n032fdD6bZViNzA0" target="_blank" className="text-sm">
                 Join Our Tribe
               </a>
               <a href="#" className="text-sm">
