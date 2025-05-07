@@ -10,7 +10,7 @@ const roboto = Roboto({
 
 export default function AppDownloadButton({ platform, ImgSrc, color }) {
   return (
-    <Link href="#">
+    <Link href="https://www.marginplus.ng/">
       <button
         className={`border-[1.5px] rounded-lg flex gap-2 px-[8px] py-[5px] cursor-pointer w-[130px] ${roboto.className}`}
         style={{ borderColor: color }}

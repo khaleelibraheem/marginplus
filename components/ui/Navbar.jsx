@@ -5,11 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navlinks = [
-  { linkName: "Why Us?", href: "#" },
-  { linkName: "Invest", href: "#" },
-  { linkName: "Raise", href: "#" },
-  { linkName: "Stories", href: "#" },
-  { linkName: "FAQ", href: "#" },
+  { linkName: "Why Us?", href: "/why-us" },
+  { linkName: "Invest", href: "/invest" },
+  { linkName: "Raise", href: "/raise" },
+  { linkName: "Stories", href: "/stories" },
+  { linkName: "Help", href: "/help" },
 ];
 
 export default function Navbar() {
@@ -26,16 +26,23 @@ export default function Navbar() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Handle mobile menu link clicks
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <div className="relative">
+    <div className="relative z-20">
       <nav className="flex justify-between items-center">
-        <Image
-          src="/images/logo.png"
-          width={150}
-          height={150}
-          alt="logo"
-          priority
-        />
+        <Link href="/">
+          <Image
+            src="/images/logo.png"
+            width={150}
+            height={150}
+            alt="logo"
+            priority
+          />
+        </Link>
 
         <div className="hidden sm:flex space-x-5 items-center">
           {navlinks.map((link) => (
@@ -48,10 +55,10 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="#"
+            href="/get-started"
             className="bg-[#014F2A] px-6 py-3 rounded-lg text-sm font-bold text-white hover:bg-emerald-800 transition-colors"
           >
-            <button className="cursor-pointer">Get Started</button>
+            <span className="cursor-pointer">Get Started</span>
           </Link>
         </div>
         
@@ -88,15 +95,15 @@ export default function Navbar() {
                     className="text-lg font-bold hover:text-emerald-700 transition-colors"
                     href={link.href}
                     key={link.linkName}
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={handleLinkClick}
                   >
                     {link.linkName}
                   </Link>
                 ))}
                 <Link
-                  href="#"
+                  href="/get-started"
                   className="bg-[#014F2A] px-6 py-3 rounded-lg text-lg font-bold text-white text-center hover:bg-emerald-800 transition-colors mt-4"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={handleLinkClick}
                 >
                   Get Started
                 </Link>
