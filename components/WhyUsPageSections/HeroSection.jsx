@@ -33,7 +33,6 @@ export default function HeroSection() {
           alt="image-carousel"
           className="w-full object-cover h-[116px] sm:h-full"
           priority
-          quality={100}
         />
       </div>
     </section>
