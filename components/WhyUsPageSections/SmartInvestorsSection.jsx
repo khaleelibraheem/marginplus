@@ -8,7 +8,7 @@ export default function SmartInvestorsSection() {
         <h2 className="text-center font-bold text-[21px] sm:text-[26px] opacity-80">
           Smart Investors Choose Marginplus
         </h2>
-        <p className="mt-6 text-sm text-center leading-5 font-medium">
+        <p className="mt-6 text-sm text-center leading-5">
           We go beyond traditional investing. We’re building a movement—one that
           combines financial growth with real-world impact. Here's why investors
           like you should choose us:

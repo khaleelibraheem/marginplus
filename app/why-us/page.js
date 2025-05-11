@@ -1,6 +1,6 @@
 import AppDownloadSection from '@/components/AppDownloadSection'
+import ReadyToBePartSection from '@/components/ReadyToBePartSection'
 import HeroSection from '@/components/WhyUsPageSections/HeroSection'
-import ReadyToBePartSection from '@/components/WhyUsPageSections/ReadyToBePartSection'
 import SmartInvestorsSection from '@/components/WhyUsPageSections/SmartInvestorsSection'
 import React from 'react'
 
