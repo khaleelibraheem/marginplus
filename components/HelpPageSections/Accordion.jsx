@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export default function Accordion() {
-  const [openItem, setOpenItem] = useState("is-my-investment-safe");
+  const [openItem, setOpenItem] = useState("is-my-money-safe");
   const [activeTab, setActiveTab] = useState("general");
 
   const faqData = {
@@ -26,7 +26,7 @@ export default function Accordion() {
           "Yes. We are legally registered and work with licensed partners to ensure compliance and secure transactions.",
       },
       {
-        id: "how-much-can-earn",
+        id: "is-my-money-safe",
         question: "Is my money safe with Marginplus?",
         answer:
           "Yes. We work only with vetted projects and manage your funds through regulated payment channels.",
