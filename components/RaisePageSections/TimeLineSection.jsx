@@ -36,7 +36,7 @@ export default function TimeLineSection() {
               02
             </div>
             <div className="lg:mt-[12px] sm:max-w-[635px]">
-              <h3 className="text-lg font-bold">Set Up Your Profile</h3>
+              <h3 className="text-lg font-bold">Submit Application</h3>
               <p className="text-sm font-medium mt-2">
                 To be eligible to raise funds on Marginplus, you must:
               </p>
@@ -58,7 +58,7 @@ export default function TimeLineSection() {
                   registration details, history, and operations.{" "}
                   <br className="sm:hidden" /> (You must have a verifiable farm
                   or business identity <br className="sm:hidden" /> and at least
-                  1 year of operating history.)
+                  2 years of operating history.)
                 </p>
               </div>
 

@@ -50,7 +50,7 @@ export default function HeroSection() {
           className="px-6 mt-8 flex flex-col gap-4 lg:flex-row justify-center
         "
         >
-          <Link href={"#"}>
+          <Link href={"mailto:hi@marginplus.ng"}>
             <button className="border-1 border-[#008647] text-[13px] font-bold text-[#008647] flex w-full lg:w-[180.8px] justify-center items-center gap-2 p-4 rounded-[10px] cursor-pointer transition-all duration-300 hover:bg-[#008647] hover:text-white group">
               Send us a mail
               <span className="transition-transform duration-300 group-hover:scale-110">

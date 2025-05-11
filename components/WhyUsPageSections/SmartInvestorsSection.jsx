@@ -9,7 +9,7 @@ export default function SmartInvestorsSection() {
           Smart Investors Choose Marginplus
         </h2>
         <p className="mt-6 text-sm text-center leading-5">
-          We go beyond traditional investing. We’re building a movement—one that
+          We go beyond traditional investing. We’re building a movement that
           combines financial growth with real-world impact. Here's why investors
           like you should choose us:
         </p>
