@@ -1,6 +1,75 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const footerData = {
+  contact: {
+    logo: "/images/logo.png",
+    address: `Block No 4, Antonio Gek plaza,\nWuse, Zone II, Abuja, Nigeria`,
+    email: "hi@marginplus.ng",
+    phone: "+234-701447-0953",
+    socials: [
+      {
+        href: "https://www.facebook.com/marginplusgrp",
+        icon: "/images/facebook.svg",
+      },
+      {
+        href: "https://x.com/marginplus_ng",
+        icon: "/images/x.svg",
+      },
+      {
+        href: "https://www.instagram.com/marginplus_ng",
+        icon: "/images/instagram.svg",
+      },
+      {
+        href: "https://www.linkedin.com/company/marginplusgroup/",
+        icon: "/images/linked.svg",
+      },
+    ],
+  },
+  links: [
+    {
+      title: "Company",
+      items: [
+        { label: "About Us", href: "#" },
+        { label: "Help", href: "/help" },
+        { label: "Careers", href: "#" },
+      ],
+    },
+    {
+      title: "Invest In",
+      items: [
+        { label: "Crop Farming", href: "#" },
+        { label: "Livestock Farming", href: "#" },
+        { label: "Agro-processing", href: "#" },
+      ],
+    },
+    {
+      title: "Explore",
+      items: [
+        {
+          label: "Join Our Tribe",
+          href: "https://t.me/+n032fdD6bZViNzA0",
+          external: true,
+        },
+        { label: "Suggestion?", href: "#" },
+        {
+          label: "Blog",
+          href: "http://blog.marginplus.ng",
+          external: true,
+        },
+      ],
+    },
+    {
+      title: "Legal",
+      items: [
+        { label: "Terms & Condition", href: "#" },
+        { label: "Privacy Policy", href: "#" },
+        { label: "Disclosure", href: "#" },
+      ],
+    },
+  ],
+};
+
 export default function FooterSection() {
   return (
     <section className="px-6 pt-8 pb-14 md:py-14 md:px-10 bg-[#B2FF96]">
@@ -8,114 +77,51 @@ export default function FooterSection() {
         <div className="flex md:justify-between md:gap-9 flex-wrap md:flex-nowrap gap-4">
           <div className="text-[#292C32] font-medium">
             <Image
-              src={"/images/logo.png"}
+              src={footerData.contact.logo}
               alt="logo"
               width={150}
               height={150}
             />
-            <p className="mt-2">
-              Block No 4, Antonio Gek plaza, <br /> Wuse, Zone II, Abuja,
-              Nigeria
+            <p className="mt-2 whitespace-pre-line">
+              {footerData.contact.address}
             </p>
-            <p className="mt-5">hi@marginplus.ng</p>
-            <p className="mt-4">+234-701447-0953</p>
+            <p className="mt-5">{footerData.contact.email}</p>
+            <p className="mt-4">{footerData.contact.phone}</p>
             <div className="flex gap-5 mt-4 mb-5 md:mb-2">
-              <Link
-                href={"https://www.facebook.com/marginplusgrp"}
-                target="_blank"
-              >
-                <Image
-                  src={"/images/facebook.svg"}
-                  alt="icon"
-                  height={20}
-                  width={20}
-                />
-              </Link>
-              <Link href={"https://x.com/marginplus_ng"} target="_blank">
-                <Image
-                  src={"/images/x.svg"}
-                  alt="icon"
-                  height={20}
-                  width={20}
-                />
-              </Link>
-              <Link
-                href={"https://www.instagram.com/marginplus_ng"}
-                target="_blank"
-              >
-                <Image
-                  src={"/images/instagram.svg"}
-                  alt="icon"
-                  height={20}
-                  width={20}
-                />
-              </Link>
-
-              <Link
-                href={"https://www.linkedin.com/company/marginplusgroup/"}
-                target="_blank"
-              >
-                <Image
-                  src={"/images/linked.svg"}
-                  alt="icon"
-                  height={20}
-                  width={20}
-                />
-              </Link>
+              {footerData.contact.socials.map(({ href, icon }, idx) => (
+                <Link
+                  key={idx}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image src={icon} alt="icon" height={20} width={20} />
+                </Link>
+              ))}
             </div>
           </div>
+
           <div className="flex flex-wrap gap-7 font-medium text-[#292C32]">
-            <div className="flex flex-col gap-3">
-              <h4 className="font-semibold">Company</h4>
-              <a href="#" className="text-sm">
-                About Us
-              </a>
-              <a href="#" className="text-sm">
-                FAQ
-              </a>
-              <a href="#" className="text-sm">
-                Careers
-              </a>
-            </div>
-            <div className="flex flex-col gap-3">
-              <h4 className="font-semibold">Invest In</h4>
-              <a href="#" className="text-sm">
-                Crop Farming
-              </a>
-              <a href="#" className="text-sm">
-                Livestock Farming
-              </a>
-              <a href="#" className="text-sm">
-                Agro-processing
-              </a>
-            </div>
-            <div className="flex flex-col gap-3">
-              <h4 className="font-semibold">Explore</h4>
-              <a href="https://t.me/+n032fdD6bZViNzA0" target="_blank" className="text-sm">
-                Join Our Tribe
-              </a>
-              <a href="#" className="text-sm">
-                Suggestion?
-              </a>
-              <a href="#" className="text-sm">
-                Blog
-              </a>
-            </div>
-            <div className="flex flex-col gap-3">
-              <h4 className="font-semibold">Legal</h4>
-              <a href="#" className="text-sm">
-                Terms & Condition
-              </a>
-              <a href="#" className="text-sm">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-sm">
-                Disclosure
-              </a>
-            </div>
+            {footerData.links.map((section, idx) => (
+              <div key={idx} className="flex flex-col gap-3">
+                <h4 className="font-semibold">{section.title}</h4>
+                {section.items.map((item, i) => (
+                  <Link
+                    key={i}
+                    href={item.href}
+                    target={item.external ? "_blank" : "_self"}
+                    rel={item.external ? "noopener noreferrer" : undefined}
+                  >
+                    <span className="text-sm">{item.label}</span>
+                  </Link>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
+
         <hr className="w-[70%] border-[#292C32] opacity-20 hidden md:block" />
+
         <div className="mt-10 flex flex-col gap-4">
           <p className="text-[13px] font-light text-[#014E2F]">
             Marginplus is a leading crowdfunding investment platform in Nigeria
@@ -124,7 +130,9 @@ export default function FooterSection() {
             Marginplus Finance Limited is duly licensed by the Securities and
             Exchange Commission (SEC) of Nigeria.{" "}
             <span className="font-semibold">
-              <a href="#">Check here</a>
+              <Link href="#">
+                <span>Check here</span>
+              </Link>
             </span>
           </p>
           <p className="text-[13px] font-light text-[#014E2F]">

@@ -1,8 +1,20 @@
+import AppDownloadSection from '@/components/AppDownloadSection'
 import ComingSoonPage from '@/components/ComingSoonPage'
-import React from 'react'
+import ReadyToBePartSection from '@/components/ReadyToBePartSection'
+import CarouselSection from '@/components/StoriesPageSections/CarouselSection'
+import HeroSection from '@/components/StoriesPageSections/HeroSection'
+import NumbersSection from '@/components/StoriesPageSections/NumbersSection'
 
 export default function page() {
   return (
-    <ComingSoonPage />
+    <main>
+      <ComingSoonPage />
+      {/* <HeroSection />
+      <CarouselSection />
+      <NumbersSection /> */}
+      <ReadyToBePartSection />
+      <AppDownloadSection />
+    </main>
+
   )
 }
