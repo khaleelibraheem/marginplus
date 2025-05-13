@@ -3,14 +3,14 @@ import AppDownloadButton from "../ui/AppDownloadButton";
 
 export default function HeroSection() {
   return (
-    <section className="md:mt-[-45px] relative px6 md:px-10 overflow-hidden sm:pb-16 max-w-[1400px] mx-auto">
+    <section className="md:mt-[-45px] relative px-3 md:px-10 overflow-hidden sm:pb-16 max-w-[1400px] mx-auto">
       {/* WaterMark */}
       <span className="absolute text-[370px] font-extrabold text-gray-100 z-0 select-none hidden lg:block top-7 left-[-25px]">
         Invest
       </span>
-      <div className="sm:mt-6 relative z-10 flex flex-col lg:gap-8 sm:flex-row items-center sm:justify-between">
+      <div className="sm:mt-30 relative z-10 flex flex-col lg:gap-8 sm:flex-row items-center sm:justify-between">
         {/* Hero-left */}
-        <div className="max-w-[460px] mt-14 sm:mt-10 flex-1">
+        <div className="max-w-[460px] mt-24 sm:mt-0 flex-1">
           <div>
             <h1 className="text-[42px] text-center sm:text-start sm:text-[52px] lg:text-7xl leading-[46px] md:leading-[50px] lg:leading-[65px] tracking-tight font-[900] text-[#014F2A]">
               <span className="sm:block">Smart </span>
