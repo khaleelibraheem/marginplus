@@ -4,7 +4,7 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section>
+    <section className="mt-[57px]">
       {/* Hero Section with Background Image */}
       <div
         className="relative flex flex-col items-center justify-center mt-5 w-full h-[427px] lg:h-[254px]"

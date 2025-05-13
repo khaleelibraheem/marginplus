@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-
 import AppDownloadButton from "./ui/AppDownloadButton";
 import Avatars from "./ui/Avatars";
 
@@ -44,16 +43,8 @@ export default function AppDownloadSection() {
           <Avatars avatarUrls={avatars} />
         </div>
         <div className="flex gap-3 mt-2 md:mt-6">
-          <AppDownloadButton
-            platform={"Google Play"}
-            ImgSrc={"/images/playstore-white.svg"}
-            color={"white"}
-          />
-          <AppDownloadButton
-            platform={"App Store"}
-            ImgSrc={"/images/apple-white.svg"}
-            color={"white"}
-          />
+          <AppDownloadButton url={"/images/googleplay-white.svg"} />
+          <AppDownloadButton url={"/images/appstore-white.svg"} />
         </div>
       </div>
     </section>

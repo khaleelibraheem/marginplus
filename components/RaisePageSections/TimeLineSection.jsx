@@ -15,7 +15,7 @@ export default function TimeLineSection() {
         </p>
       </div>
 
-      <div className="sm:mt-20 px-4 flex justify-center gap-50">
+      <div className="sm:mt-20 px-6 lg:px-10 flex justify-center gap-50">
         <div className="max-w-[825px]">
           <div className="flex flex-col lg:flex-row lg:items-center gap-5 mt-10 ">
             <div className="text-[50px] sm:text-8xl font-extrabold text-[#014F2A]">

@@ -1,10 +1,9 @@
 import Image from "next/image";
-import HeroImage from "../ui/HeroImage";
 import AppDownloadButton from "../ui/AppDownloadButton";
 
 export default function HeroSection() {
   return (
-    <section className="md:mt-[-45px] relative px-3 sm:px-10 overflow-hidden sm:pb-16 max-w-[1400px] mx-auto">
+    <section className="md:mt-[-45px] relative px6 md:px-10 overflow-hidden sm:pb-16 max-w-[1400px] mx-auto">
       {/* WaterMark */}
       <span className="absolute text-[370px] font-extrabold text-gray-100 z-0 select-none hidden lg:block top-7 left-[-25px]">
         Invest
@@ -43,16 +42,8 @@ export default function HeroSection() {
 
           {/* App Download Button */}
           <div className="mt-1 sm:mt-4 flex gap-3 justify-center sm:justify-start">
-            <AppDownloadButton
-              ImgSrc={"/images/playstore-green.svg"}
-              platform={"Google Play"}
-              color={"#008647"}
-            />
-            <AppDownloadButton
-              ImgSrc={"/images/apple-green.svg"}
-              platform={"App Store"}
-              color={"#008647"}
-            />
+            <AppDownloadButton url={"/images/googleplay.svg"} />
+            <AppDownloadButton url={"/images/appstore.svg"} />
           </div>
         </div>
 

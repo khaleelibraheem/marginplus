@@ -15,6 +15,7 @@ const navlinks = [
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   
   useEffect(() => {
@@ -24,8 +25,21 @@ export default function Navbar() {
       }
     };
     
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   // Handle mobile menu link clicks
@@ -34,49 +48,51 @@ export default function Navbar() {
   };
 
   return (
-    <div className="relative z-20">
-      <nav className="flex justify-between items-center">
-        <Link href="/">
-          <Image
-            src="/images/logo.png"
-            width={150}
-            height={150}
-            alt="logo"
-            priority
-          />
-        </Link>
-
-        <div className="hidden sm:flex space-x-5 items-center">
-          {navlinks.map((link) => (
-            <Link
-              className={`text-sm font-medium transition-colors ${
-                pathname === link.href 
-                  ? "text-emerald-700" 
-                  : "hover:text-emerald-700"
-              }`}
-              href={link.href}
-              key={link.linkName}
-            >
-              {link.linkName}
-            </Link>
-          ))}
-          <Link
-            href="https://www.marginplus.ng/"
-            className={`bg-[#014F2A] px-6 py-3 rounded-lg text-sm font-bold text-white hover:bg-emerald-800 transition-colors`}
-          >
-            <span className="cursor-pointer">Get Started</span>
+    <div className={`${isScrolled ? 'fixed top-0 left-0 right-0 shadow-sm bg-white' : 'fixed top-0 left-0 right-0'} z-20 transition-all duration-300`}>
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <nav className="flex justify-between items-center py-4">
+          <Link href="/">
+            <Image
+              src="/images/logo.png"
+              width={150}
+              height={150}
+              alt="logo"
+              priority
+            />
           </Link>
-        </div>
-        
-        <div 
-          className="flex flex-col space-y-[2px] cursor-pointer sm:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <div className={`w-[30px] h-1 bg-[#014F2A] rounded-md transition-all duration-300 ${isMenuOpen ? 'transform rotate-45 translate-y-2' : ''}`}></div>
-          <div className={`w-[30px] h-1 bg-[#014F2A] rounded-md transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></div>
-          <div className={`w-[30px] h-1 bg-[#014F2A] rounded-md transition-all duration-300 ${isMenuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></div>
-        </div>
-      </nav>
+
+          <div className="hidden sm:flex space-x-5 items-center">
+            {navlinks.map((link) => (
+              <Link
+                className={`text-sm font-medium transition-colors ${
+                  pathname === link.href 
+                    ? "text-emerald-700" 
+                    : "hover:text-emerald-700"
+                }`}
+                href={link.href}
+                key={link.linkName}
+              >
+                {link.linkName}
+              </Link>
+            ))}
+            <Link
+              href="https://www.marginplus.ng/"
+              className={`bg-[#014F2A] px-6 py-3 rounded-lg text-sm font-bold text-white hover:bg-emerald-800 transition-colors`}
+            >
+              <span className="cursor-pointer">Get Started</span>
+            </Link>
+          </div>
+          
+          <div 
+            className="flex flex-col space-y-[2px] cursor-pointer sm:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <div className={`w-[30px] h-1 bg-[#014F2A] rounded-md transition-all duration-300 ${isMenuOpen ? 'transform rotate-45 translate-y-2' : ''}`}></div>
+            <div className={`w-[30px] h-1 bg-[#014F2A] rounded-md transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></div>
+            <div className={`w-[30px] h-1 bg-[#014F2A] rounded-md transition-all duration-300 ${isMenuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></div>
+          </div>
+        </nav>
+      </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
