@@ -1,5 +1,4 @@
 import AppDownloadSection from '@/components/AppDownloadSection'
-import ComingSoonPage from '@/components/ComingSoonPage'
 import ReadyToBePartSection from '@/components/ReadyToBePartSection'
 import CarouselSection from '@/components/StoriesPageSections/CarouselSection'
 import HeroSection from '@/components/StoriesPageSections/HeroSection'
@@ -8,10 +7,9 @@ import NumbersSection from '@/components/StoriesPageSections/NumbersSection'
 export default function page() {
   return (
     <main>
-      <ComingSoonPage />
-      {/* <HeroSection />
+      <HeroSection />
       <CarouselSection />
-      <NumbersSection /> */}
+      <NumbersSection />
       <ReadyToBePartSection />
       <AppDownloadSection />
     </main>

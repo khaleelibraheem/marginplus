@@ -33,7 +33,7 @@ export default function RecentOpportunitiesSection() {
   ];
 
   return (
-    <section className='mb-60 md:mb-100'>
+    <section className='mb-60'>
       {/* Section Header */}
       <div className="mt-20 max-w-[350px] sm:max-w-[640px] mx-auto flex flex-col items-center">
         <h2 className="text-center font-bold text-[21px] sm:text-[26px] opacity-80">
