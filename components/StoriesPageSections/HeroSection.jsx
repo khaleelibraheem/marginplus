@@ -24,7 +24,7 @@ export default function HeroSection() {
         <div className="flex justify-center mt-7 items-center ">
           <Link
             href={"https://www.marginplus.ng/"}
-            className="cursor-pointer w-[226.8px] h-[60px]"
+            className="cursor-pointer"
             target="_blank"
           >
             <button className="flex gap-2 items-center justify-center cursor-pointer px-[26px] py-[10px] rounded-xl font-bold bg-[#014D2F] text-white w-full h-full text-[13px]">

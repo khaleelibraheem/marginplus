@@ -142,14 +142,6 @@ export default function Navbar() {
                 <span className="cursor-pointer">Get Started</span>
               </Link>
             </div>
-
-            {/* Mobile Get Started button only visible on small screens */}
-            <Link
-              href="https://www.marginplus.ng/"
-              className={`sm:hidden bg-[#014F2A] px-6 py-3 rounded-lg text-sm font-bold text-white hover:bg-emerald-800 transition-colors`}
-            >
-              <span className="cursor-pointer">Get Started</span>
-            </Link>
           </nav>
         </div>
       </div>
@@ -219,6 +211,20 @@ export default function Navbar() {
                       </Link>
                     </motion.div>
                   ))}
+
+                  {/* Mobile Get Started button only visible on small screens */}
+                  <motion.div
+                    initial={{ x: -50, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.5 }}
+                  >
+                    <Link
+                      href="https://www.marginplus.ng/"
+                      className={`sm:hidden bg-[#014F2A] px-6 py-3 rounded-lg text-sm font-bold text-white hover:bg-emerald-800 transition-colors`}
+                    >
+                      <span className="cursor-pointer">Get Started</span>
+                    </Link>
+                  </motion.div>
                 </div>
               </div>
             </motion.div>
