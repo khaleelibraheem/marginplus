@@ -30,7 +30,7 @@ const footerData = {
     {
       title: "Company",
       items: [
-        { label: "About Us", href: "#" },
+        { label: "About Us", href: "/about-us" },
         { label: "Help", href: "/help" },
         { label: "Careers", href: "#" },
       ],

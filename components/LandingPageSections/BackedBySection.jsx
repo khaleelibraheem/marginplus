@@ -3,57 +3,53 @@ import Image from "next/image";
 
 export default function BackedBySection() {
   return (
-    <section className="mt-20 max-w-[1400px] mx-auto px-7">
-      <h2 className="text-[#014F2A] text-center mt-4 sm:mt-8 font-bold text-[24px] sm:text-[26px]">
-        Backed by Industry Leaders
-      </h2>
+    <section className="mt-20">
+      <div className="sm:max-w-[478.31px] mx-auto flex flex-col items-center">
+        <div>
+          <h2 className="text-center font-bold text-[20px] sm:text-[24px]">
+            Backed by Industry Leaders
+          </h2>
+          <p className="mt-6 text-sm text-center leading-5 font-medium">
+            We collaborated with trusted financial and agricultural institutions
+            ensure <br className="sm:hidden" /> secure and profitable
+            investments
+          </p>
+        </div>
 
-      {/* Desktop Text */}
-      <div className="hidden sm:flex flex-col gap-1">
-        <p className="bg-[#f2faf4] text-xl text-center max-w-[700px] mx-auto font-medium">
-          We collaborated with trusted financial and agricultural institutions
-          ensure
-        </p>
-        <p className="bg-[#f2faf4] text-xl text-center max-w-[700px] mx-auto font-medium">
-          secure and profitable investments
-        </p>
-      </div>
-
-      {/* Mobile Text */}
-      <div className="flex sm:hidden flex-col gap-1">
-        <p className="bg-[#f2faf4] text-center max-w-[550px] mx-auto font-semibold text-[16px]">
-          We collaborated with trusted financial and
-        </p>
-        <p className="bg-[#f2faf4] text-center max-w-[550px] mx-auto font-semibold text-[16px]">
-          agricultural institutions ensure secure and
-        </p>
-        <p className="bg-[#f2faf4] text-center max-w-[550px] mx-auto font-semibold text-[16px]">
-          profitable investments
-        </p>
-      </div>
-
-      <div className="mt-4 md:mt-6 flex justify-center gap-3 md:gap-6">
-        <Image
-          src="/images/nirsal-logo.png"
-          alt="NIRSAL logo"
-          width={100}
-          height={100}
-          className="w-[100px] h-[60px] md:w-[150px] md:h-[80px]"
-        />
-        <Image
-          src="/images/fmard-logo.png"
-          alt="FMARD logo"
-          width={100}
-          height={100}
-          className="w-[150px] h-[60px] md:w-[200px] md:h-[80px]"
-        />
-        <Image
-          src="/images/jaiz-logo.png"
-          alt="Jaiz logo"
-          width={100}
-          height={100}
-          className="w-[100px] h-[60px] md:w-[150px] md:h-[80px]"
-        />
+        <div className="mt-4 flex gap-3 flex-wrap px-4 sm:px-0">
+          <Image
+            src="/images/nirsal-logo.png"
+            alt="NIRSAL logo"
+            width={100}
+            height={100}
+            className="w-[86.49px] h-[46.64px]"
+            priority
+          />
+          <Image
+            src="/images/fmard-logo.png"
+            alt="FMARD logo"
+            width={100}
+            height={100}
+            className="w-[121.88px] h-[53.68px]"
+            priority
+          />
+          <Image
+            src="/images/jaiz-logo.png"
+            alt="Jaiz logo"
+            width={100}
+            height={100}
+            className="w-[99.4px] h-[53.68px]"
+            priority
+          />
+          <Image
+            src="/images/taj-bank.png"
+            alt="Jaiz logo"
+            width={100}
+            height={100}
+            className="w-[128px] h-[43px]"
+            priority
+          />
+        </div>
       </div>
     </section>
   );

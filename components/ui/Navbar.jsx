@@ -68,59 +68,59 @@ export default function Navbar() {
     <>
       <div
         className={`
-          fixed top-0 left-0 right-0 z-20 transition-all duration-300
+          fixed top-0 left-0 right-0 z-20 transition-all duration-300 
           ${isScrolled ? "shadow-sm bg-white" : ""}
           ${isVisible ? "translate-y-0" : "-translate-y-full"}
         `}
       >
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <nav className="flex justify-between items-center py-4">
-            {/* Mobile hamburger menu only visible on small screens */}
-            <div className="flex items-center">
-              <motion.button
-                className="flex flex-col justify-center cursor-pointer sm:hidden mr-4"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                initial={false}
-                animate={isMenuOpen ? "open" : "closed"}
-              >
-                <motion.span
-                  className="w-7 h-0.5 bg-[#014F2A] block mb-1.5"
-                  variants={{
-                    closed: { rotate: 0, y: 0 },
-                    open: { rotate: 45, y: 6 },
-                  }}
-                  transition={{ duration: 0.3 }}
-                />
-                <motion.span
-                  className="w-7 h-0.5 bg-[#014F2A] block mb-1.5"
-                  variants={{
-                    closed: { opacity: 1 },
-                    open: { opacity: 0 },
-                  }}
-                  transition={{ duration: 0.3 }}
-                />
-                <motion.span
-                  className="w-7 h-0.5 bg-[#014F2A] block"
-                  variants={{
-                    closed: { rotate: 0, y: 0 },
-                    open: { rotate: -45, y: -6 },
-                  }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.button>
+            {/* Logo moved to the left on mobile */}
+            <Link href="/">
+              <Image
+                src="/images/logo.png"
+                width={150}
+                height={150}
+                alt="logo"
+                priority
+                className="w-[150px]"
+              />
+            </Link>
 
-              <Link href="/">
-                <Image
-                  src="/images/logo.png"
-                  width={150}
-                  height={150}
-                  alt="logo"
-                  priority
-                  className="w-[102px] h-[24px] sm:w-[150px] sm:h-[34px]"
-                />
-              </Link>
-            </div>
+            {/* Hamburger menu moved to the right on mobile */}
+            <motion.button
+              className="flex flex-col justify-center cursor-pointer sm:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              initial={false}
+              animate={isMenuOpen ? "open" : "closed"}
+            >
+              <motion.span
+                className="w-7 h-0.5 bg-[#014F2A] block mb-1.5"
+                variants={{
+                  closed: { rotate: 0, y: 0 },
+                  open: { rotate: 45, y: 6 },
+                }}
+                transition={{ duration: 0.3 }}
+              />
+              <motion.span
+                className="w-7 h-0.5 bg-[#014F2A] block mb-1.5"
+                variants={{
+                  closed: { opacity: 1 },
+                  open: { opacity: 0 },
+                }}
+                transition={{ duration: 0.3 }}
+              />
+              <motion.span
+                className="w-7 h-0.5 bg-[#014F2A] block"
+                variants={{
+                  closed: { rotate: 0, y: 0 },
+                  open: { rotate: -45, y: -6 },
+                }}
+                transition={{ duration: 0.3 }}
+              />
+            </motion.button>
 
+            {/* Desktop navigation links */}
             <div className="hidden sm:flex space-x-5 items-center">
               {navlinks.map((link) => (
                 <Link
@@ -146,7 +146,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu - Slides from left side */}
+      {/* Mobile Menu - slides from right side */}
       <AnimatePresence>
         {isMenuOpen && (
           <>
@@ -159,10 +159,10 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             ></motion.div>
             <motion.div
-              className="fixed left-0 top-0 h-full w-64 bg-white shadow-lg transform z-50 sm:hidden"
-              initial={{ x: "-100%" }}
+              className="fixed right-0 top-0 h-full w-64 bg-white shadow-lg transform z-50 sm:hidden"
+              initial={{ x: "100%" }}
               animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
+              exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
               <div className="flex flex-col p-6">
@@ -194,14 +194,14 @@ export default function Navbar() {
                   {navlinks.map((link, index) => (
                     <motion.div
                       key={link.linkName}
-                      initial={{ x: -50, opacity: 0 }}
+                      initial={{ x: 50, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: index * 0.1 }}
                     >
                       <Link
                         className={`text-lg font-medium transition-colors ${
                           pathname === link.href
-                            ? "text-emerald-700 border-l-4 border-emerald-700 pl-2"
+                            ? "text-emerald-700 border-r-4 border-emerald-700 pr-2"
                             : "hover:text-emerald-700"
                         }`}
                         href={link.href}
@@ -212,9 +212,9 @@ export default function Navbar() {
                     </motion.div>
                   ))}
 
-                  {/* Mobile Get Started button only visible on small screens */}
+                  {/* Mobile Get Started button */}
                   <motion.div
-                    initial={{ x: -50, opacity: 0 }}
+                    initial={{ x: 50, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.5 }}
                   >

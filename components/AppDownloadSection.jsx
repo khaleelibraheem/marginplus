@@ -31,6 +31,7 @@ export default function AppDownloadSection() {
           alt="iphone"
           height={300}
           width={300}
+          priority
         />
       </div>
       <div className="bg-[#004D2E] self-start p-5 md:max-w-[450px]">

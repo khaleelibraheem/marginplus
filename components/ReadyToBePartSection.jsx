@@ -12,6 +12,7 @@ export default function ReadyToBePartSection() {
           height={100}
           alt="bell-icon"
           className="w-[40px] h-[50px] absolute top-[-15px] right-0"
+          priority
         />
         <h2 className="leading-8 md:leading-normal text-center font-bold text-[24px] opacity-80">
           Ready to be part of something big?
