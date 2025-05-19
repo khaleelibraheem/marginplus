@@ -11,11 +11,12 @@ export default function FeaturedSection() {
         {/* Mobile Logos(Smaller in Size) */}
         <div className="flex md:hidden gap-3 sm:gap-7 items-center">
           <Image
-            src={"/images/techcrunch-logo.svg"}
+            src={"/images/techcabal.png"}
             alt="company"
             height={120}
             width={120}
             priority
+            className="w-[20px]"
           />
           <Image
             src={"/images/bbc-logo.svg"}
@@ -25,22 +26,24 @@ export default function FeaturedSection() {
             priority
           />
           <Image
-            src={"/images/blogx-logo.svg"}
+            src={"/images/disruptafrica.png"}
             alt="company"
             height={50}
             width={50}
             priority
+            className="h-[20px] w-[50px]"
           />
         </div>
 
         {/* Desktop Logos(Bigger in Size) */}
         <div className="hidden md:flex gap-10 items-center">
           <Image
-            src={"/images/techcrunch-logo.svg"}
+            src={"/images/techcabal.png"}
             alt="company"
             height={150}
             width={150}
             priority
+            className="w-[40px]"
           />
           <Image
             src={"/images/bbc-logo.svg"}
@@ -50,19 +53,11 @@ export default function FeaturedSection() {
             priority
           />
           <Image
-            src={"/images/blogx-logo.svg"}
+            src={"/images/disruptafrica.png"}
             alt="company"
             height={80}
             width={80}
             priority
-          />
-          <Image
-            src={"/images/techsomia-logo.svg"}
-            alt="company"
-            height={140}
-            width={140}
-            priority
-            className="hidden md:block"
           />
         </div>
       </div>
