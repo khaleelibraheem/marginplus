@@ -54,7 +54,7 @@ export default function OurValuesSection() {
       </div>
 
       {/* Cards */}
-      <div className="max-w-[1228px] mx-auto px-6 mt-10 flex flex-col md:flex-row md:flex-wrap gap-5 lg:gap-0">
+      <div className="max-w-[1228px] mx-auto px-4 mt-10 flex flex-col md:flex-row md:flex-wrap gap-5 lg:gap-0">
         {valueCardData.map((card) => (
           <OurCoreValuesCard
             key={card.id}

@@ -5,7 +5,7 @@ export default function FeaturedSection() {
   return (
     <section className="mt-[-35px]">
       <div className="bg-[#A5F48D] py-4 flex justify-center items-center">
-        <p className="text-[#008647] font-semibold mr-2 md:text-xl">
+        <p className="text-[#008647] font-semibold mr-2 text-[8.45px] sm:text-[16px]">
           Featured on:
         </p>
         {/* Mobile Logos(Smaller in Size) */}
@@ -68,9 +68,9 @@ export default function FeaturedSection() {
       </div>
 
       <div className="max-w-[1400px] mx-auto">
-        <div className="mx-3 md:mx-10 mt-20 rounded-2xl px-6 py-4 sm:px-12 sm:pt-12 sm:pb-8 bg-[#008647] flex justify-between">
+        <div className="mx-3 md:mx-10 mt-20 rounded-2xl sm:rounded-[40px] px-4 py-4 sm:px-16 bg-[#00814C] flex justify-between items-center">
           <div className="text-white">
-            <h2 className="text-[25px] sm:text-5xl font-bold">
+            <h2 className="text-[25px] sm:text-4xl font-bold">
               Invest with Confidence
             </h2>
             <ul className="mt-1 lg:mt-5 space-y-3 lg:space-y-1">
@@ -124,10 +124,11 @@ export default function FeaturedSection() {
           </div>
           <div className="hidden sm:block">
             <Image
-              src={"/images/trusted-icon.svg"}
+              src={"/images/shield.png"}
               alt="check"
-              width={250}
-              height={250}
+              width={1500}
+              height={500}
+              className="w-[259.36px] h-[317px]"
               priority
             />
           </div>

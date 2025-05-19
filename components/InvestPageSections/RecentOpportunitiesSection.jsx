@@ -45,7 +45,7 @@ export default function RecentOpportunitiesSection() {
       </div>
 
       {/* Cards Grid */}
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center max-w-[1400px] mx-auto px-6 lg:px-10 gap-5 lg:gap-4">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center max-w-[1400px] mx-auto px-4 lg:px-10 gap-5 lg:gap-4">
         {investmentOpportunities.map((opportunity) => (
           <InvestmentCard
             key={opportunity.id}

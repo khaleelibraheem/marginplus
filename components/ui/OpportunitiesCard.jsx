@@ -1,33 +1,56 @@
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+
+export function OpportunitiesButton({ text, bgColor, textColor, pl, pr, url = "https://www.marginplus.ng/" }) {
+  return (
+    <Link href={url} className="cursor-pointer" target="_blank">
+      <button
+        className="cursor-pointer px-[26px] py-[10px] rounded-xl font-bold flex items-center gap-2"
+        style={{ backgroundColor: bgColor, color: textColor, paddingLeft: pl, paddingRight: pr }}
+      >
+        {text}
+        <ArrowRight size={16} />
+      </button>
+    </Link>
+  );
+}
 
 export default function OpportunitiesCard({
   bgColor,
   imgSrc,
   title,
   description,
-  textColor
+  textColor,
+  buttonTextColor,
+  buttonBgColor,
+  url,
 }) {
-
-  const standardImageSize = 80;
-
   return (
     <div
-      className="flex md:flex-col gap-4 p-4 pb-8 w-full md:w-[270px] rounded-xl flex-1"
+      className="flex justify-between px-4 pt-6 pb-7 gap-5 w-full rounded-xl flex-1"
       style={{ backgroundColor: bgColor }}
     >
-      <div className="flex mx-auto justify-center items-center h-[80px] w-[180px]">
-        <Image 
-          src={imgSrc} 
-          width={standardImageSize} 
-          height={standardImageSize} 
-          alt={`${title} icon`}
-          className="object-contain w-full h-full" 
-        
-        />
+      <div style={{ color: textColor }} className="max-w-[180px] md:max-w-[202px]">
+        <h3 className="font-semibold text-xl">{title}</h3>
+        <p className="text-sm mt-2 sm:text-base">{description}</p>
+        <div className="mt-5">
+          <OpportunitiesButton
+            text="Learn more"
+            textColor={buttonTextColor}
+            bgColor={buttonBgColor}
+            url={url}
+          />
+        </div>
       </div>
-      <div className="flex flex-col justify-center md:items-center" style={{color: textColor}}>
-        <h3 className="font-bold text-lg">{title}</h3>
-        <p className="text-[13px] sm:text-[16px] md:text-center">{description}</p>
+      <div>
+        <Image
+          src={imgSrc}
+          width={500}
+          height={500}
+          alt={`${title} icon`}
+          className="object-contain w-[139px] md:w-[124px] md:h-[163px]"
+        />
       </div>
     </div>
   );

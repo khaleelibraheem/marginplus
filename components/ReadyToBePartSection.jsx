@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ReadyToBePartSection() {
   return (
-    <section className="mt-20 px-6">
+    <section className="mt-20 px-4">
       <div className="relative w-full box-border px-[20px] py-5 sm:max-w-[756px] mx-auto border-[#B2FF9680] border-1 rounded-3xl  bg-[#F6F6F6]">
         <Image
           src={"/images/bell-icon.png"}
