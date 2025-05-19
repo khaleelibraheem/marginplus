@@ -3,9 +3,9 @@ import Button from "../ui/Button";
 
 export default function FeaturedSection() {
   return (
-    <section className="mt-[-35px]">
+    <section className="mt-[-10px]">
       <div className="bg-[#A5F48D] py-4 flex justify-center items-center">
-        <p className="text-[#008647] font-semibold mr-2 text-[8.45px] sm:text-[16px]">
+        <p className="text-[#008647] font-semibold mr-2 text-sm sm:text-[16px]">
           Featured on:
         </p>
         {/* Mobile Logos(Smaller in Size) */}
@@ -31,12 +31,12 @@ export default function FeaturedSection() {
             height={50}
             width={50}
             priority
-            className="h-[20px] w-[50px]"
+            className="h-[30px] w-[65px]"
           />
         </div>
 
         {/* Desktop Logos(Bigger in Size) */}
-        <div className="hidden md:flex gap-10 items-center">
+        <div className="hidden md:flex gap-8 items-center">
           <Image
             src={"/images/techcabal.png"}
             alt="company"
@@ -63,7 +63,7 @@ export default function FeaturedSection() {
       </div>
 
       <div className="max-w-[1400px] mx-auto">
-        <div className="mx-3 md:mx-10 mt-20 rounded-2xl sm:rounded-[40px] px-4 py-4 sm:px-16 bg-[#00814C] flex justify-between items-center">
+        <div className="mx-3 md:mx-10 mt-10 sm:mt-20 rounded-2xl sm:rounded-[40px] px-4 py-4 sm:px-16 bg-[#00814C] flex justify-between items-center">
           <div className="text-white">
             <h2 className="text-[25px] sm:text-4xl font-bold">
               Invest with Confidence
