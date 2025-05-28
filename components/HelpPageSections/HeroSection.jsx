@@ -4,7 +4,7 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section className="mt-[57px]">
+    <section className="sm:mt-[80px]">
       {/* Hero Section with Background Image */}
       <div
         className="relative flex flex-col items-center justify-center mt-16 w-full h-[427px] lg:h-[254px]"
@@ -50,7 +50,7 @@ export default function HeroSection() {
           className="px-4 mt-8 flex flex-col gap-4 lg:flex-row justify-center
         "
         >
-          <Link href={"mailto:hi@marginplus.ng"}>
+          <Link href={"mailto:hi@marginplusgroup.com"}>
             <button className="border-1 border-[#008647] text-[13px] font-bold text-[#008647] flex w-full lg:w-[180.8px] justify-center items-center gap-2 p-4 rounded-[10px] cursor-pointer transition-all duration-300 hover:bg-[#008647] hover:text-white group">
               Send us a mail
               <span className="transition-transform duration-300 group-hover:scale-110">
@@ -65,7 +65,7 @@ export default function HeroSection() {
             </button>
           </Link>
 
-          <Link href={"#"}>
+          <Link href={"tel:+2347043332374"}>
             <button className="border-1 border-[#008647] text-[13px] font-bold text-[#008647] flex w-full lg:w-[114.8px] justify-center items-center gap-2 p-4 rounded-[10px] cursor-pointer transition-all duration-300 hover:bg-[#008647] hover:text-white group">
               Call
               <span className="transition-transform duration-300 group-hover:scale-110">
@@ -80,7 +80,7 @@ export default function HeroSection() {
             </button>
           </Link>
 
-          <Link href={"#"}>
+          <Link href={"https://wa.me/2347043332374"} target="_blank">
             <button className="border border-[#008647] text-[13px] font-bold text-[#008647] flex w-full lg:w-[156.8px] justify-center items-center gap-2 p-4 rounded-[10px] cursor-pointer transition-all duration-300 hover:bg-[#008647] hover:text-white group">
               Whatsapp
               <span className="transition-transform duration-300 group-hover:scale-110">

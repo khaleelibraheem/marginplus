@@ -2,12 +2,12 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export function OpportunitiesButton({ text, bgColor, textColor, pl, pr, url = "https://www.marginplus.ng/" }) {
+export function OpportunitiesButton({ text, bgColor, textColor, url = "https://www.marginplus.ng/" }) {
   return (
     <Link href={url} className="cursor-pointer" target="_blank">
       <button
-        className="cursor-pointer px-[26px] py-[10px] rounded-xl font-bold flex items-center gap-2"
-        style={{ backgroundColor: bgColor, color: textColor, paddingLeft: pl, paddingRight: pr }}
+        className="cursor-pointer h-[46px] px-[20px] py-[7px] rounded-[8.8px] text-sm font-semibold flex items-center gap-2"
+        style={{ backgroundColor: bgColor, color: textColor }}
       >
         {text}
         <ArrowRight size={16} />

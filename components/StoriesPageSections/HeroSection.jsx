@@ -27,7 +27,7 @@ export default function HeroSection() {
             className="cursor-pointer"
             target="_blank"
           >
-            <button className="flex gap-2 items-center justify-center cursor-pointer px-[26px] py-[10px] rounded-xl font-bold bg-[#014D2F] text-white w-full h-full text-[13px]">
+            <button className="flex gap-2 items-center justify-center cursor-pointer h-[49px] px-[32px] py-[18px] rounded-[10px] font-bold bg-[#014D2F] text-white w-full text-[13px]">
               <span>#Watch ImpactSeries</span>
               <Image
                 src={"/images/youtube.svg"}

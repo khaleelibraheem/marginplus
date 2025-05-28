@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "../ui/Button";
+import Link from "next/link";
 
 export default function InvestingSection() {
   return (
@@ -24,7 +25,15 @@ export default function InvestingSection() {
             businesses and <br /> sustainable wealth creation
           </p>
           <div className="mt-5">
-            <Button text={"Get Started"} bgColor={"white"} textColor={"#014F2A"} />
+            <Link
+              href={"https://www.marginplus.ng/"}
+              className="cursor-pointer"
+              target="_blank"
+            >
+              <button className="cursor-pointer px-[32px] py-[14.08px] rounded-[10px] text-[13px] font-bold bg-white text-[#014F2A] h-[55.16px] w-[181.12px]">
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       </div>

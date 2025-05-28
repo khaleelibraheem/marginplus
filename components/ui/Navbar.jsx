@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import Button from "./Button";
 
 const navlinks = [
   { linkName: "Why Us?", href: "/why-us" },
@@ -135,12 +136,11 @@ export default function Navbar() {
                   {link.linkName}
                 </Link>
               ))}
-              <Link
-                href="https://www.marginplus.ng/"
-                className={`bg-[#014F2A] px-6 py-3 rounded-lg text-sm font-bold text-white hover:bg-emerald-800 transition-colors`}
-              >
-                <span className="cursor-pointer">Get Started</span>
-              </Link>
+              <Button
+                text={"Get Started"}
+                bgColor={"#014F2A"}
+                textColor={"white"}
+              />
             </div>
           </nav>
         </div>
@@ -218,12 +218,11 @@ export default function Navbar() {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.5 }}
                   >
-                    <Link
-                      href="https://www.marginplus.ng/"
-                      className={`sm:hidden bg-[#014F2A] px-6 py-3 rounded-lg text-sm font-bold text-white hover:bg-emerald-800 transition-colors`}
-                    >
-                      <span className="cursor-pointer">Get Started</span>
-                    </Link>
+                    <Button
+                      text={"Get Started"}
+                      bgColor={"#014F2A"}
+                      textColor={"white"}
+                    />
                   </motion.div>
                 </div>
               </div>

@@ -31,7 +31,7 @@ export default function ReadyToBePartSection() {
             href="https://www.marginplus.ng/"
             className="cursor-pointer mt-5 md:mt-0 md:self-baseline-last"
           >
-            <button className="cursor-pointer px-[26px] py-[8px] rounded-xl text-[13px] w-[156px] h-[49px] bg-[#014F2A] text-white font-bold">
+            <button className="flex items-center cursor-pointer h-[49px] px-[32px] py-[18px] rounded-[10px] text-[13px]  w-[156px] bg-[#014F2A] text-white font-bold">
               Partner with Us
             </button>
           </Link>

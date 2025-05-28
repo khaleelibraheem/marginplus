@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "../ui/Button";
+import { OpportunitiesButton } from "../ui/OpportunitiesCard";
 
 export default function FeaturedSection() {
   return (
@@ -62,7 +62,7 @@ export default function FeaturedSection() {
         </div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto">
+      <div className="max-w-[1018px] mx-auto">
         <div className="mx-3 md:mx-10 mt-10 sm:mt-20 rounded-2xl sm:rounded-[40px] px-4 py-4 sm:px-16 bg-[#00814C] flex justify-between items-center">
           <div className="text-white">
             <h2 className="text-[25px] sm:text-4xl font-bold">
@@ -110,7 +110,7 @@ export default function FeaturedSection() {
               </li>
             </ul>
             <div className="mt-4 sm:mt-8">
-              <Button
+              <OpportunitiesButton
                 text={"Invest now"}
                 bgColor={"#B2FF96"}
                 textColor={"#008647"}

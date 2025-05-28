@@ -58,7 +58,7 @@ export default function InvestmentCard({
 
         {/* Invest button */}
         <Link href={"#"}>
-          <button className="w-full text-[13px] bg-[#008647] font-bold hover:bg-green-700 text-white py-3 px-4 rounded-xl flex items-center justify-center mb-3">
+          <button className="w-full cursor-pointer text-[13px] bg-[#008647] font-bold hover:bg-green-700 text-white py-[18px] rounded-[10px] flex items-center justify-center mb-3">
             <span className="mr-2">Invest now</span>
             <ArrowRight size={16} />
           </button>
