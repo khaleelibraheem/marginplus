@@ -32,7 +32,7 @@ const footerData = {
       items: [
         { label: "About Us", href: "/about-us" },
         { label: "Help", href: "/help" },
-        { label: "Careers", href: "#" },
+        { label: "Careers", href: "/careers" },
       ],
     },
     {

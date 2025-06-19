@@ -4,7 +4,7 @@ import BackedBySection from "../LandingPageSections/BackedBySection";
 
 export default function HeroSection() {
   return (
-    <section className="mt-20 mx-auto flex flex-col items-center">
+    <section className="mt-32 mx-auto flex flex-col items-center">
       {/* Section Header */}
       <div className="max-w-[350px] sm:max-w-[640px] mx-auto flex flex-col items-center">
         <h1 className="text-3xl sm:text-4xl font-bold text-center">
