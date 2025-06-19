@@ -6,7 +6,7 @@ const footerData = {
     logo: "/images/logo.png",
     address: `Block No 4, Antonio Gek plaza,\nWuse, Zone II, Abuja, Nigeria`,
     email: "hi@marginplus.ng",
-    phone: "+234-701447-0953",
+    phone: "+234-704333-2374",
     socials: [
       {
         href: "https://www.facebook.com/marginplusgrp",
