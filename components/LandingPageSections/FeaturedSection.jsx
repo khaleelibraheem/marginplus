@@ -3,67 +3,10 @@ import { OpportunitiesButton } from "../ui/OpportunitiesCard";
 
 export default function FeaturedSection() {
   return (
-    <section className="mt-[-10px]">
-      <div className="bg-[#A5F48D] py-4 flex justify-center items-center">
-        <p className="text-[#008647] font-semibold mr-2 text-sm sm:text-[16px]">
-          Featured on:
-        </p>
-        {/* Mobile Logos(Smaller in Size) */}
-        <div className="flex md:hidden gap-3 sm:gap-7 items-center">
-          <Image
-            src={"/images/techcabal.png"}
-            alt="company"
-            height={120}
-            width={120}
-            priority
-            className="w-[20px]"
-          />
-          <Image
-            src={"/images/bbc-logo.svg"}
-            alt="company"
-            height={60}
-            width={60}
-            priority
-          />
-          <Image
-            src={"/images/disruptafrica.png"}
-            alt="company"
-            height={50}
-            width={50}
-            priority
-            className="h-[30px] w-[65px]"
-          />
-        </div>
+    <section className="mt-[-10px] max-w-[1440px] mx-auto px-4 lg:px-6">
 
-        {/* Desktop Logos(Bigger in Size) */}
-        <div className="hidden md:flex gap-8 items-center">
-          <Image
-            src={"/images/techcabal.png"}
-            alt="company"
-            height={150}
-            width={150}
-            priority
-            className="w-[40px]"
-          />
-          <Image
-            src={"/images/bbc-logo.svg"}
-            alt="company"
-            height={90}
-            width={90}
-            priority
-          />
-          <Image
-            src={"/images/disruptafrica.png"}
-            alt="company"
-            height={80}
-            width={80}
-            priority
-          />
-        </div>
-      </div>
-
-      <div className="max-w-[1018px] mx-auto">
-        <div className="mx-3 md:mx-10 mt-10 sm:mt-20 rounded-2xl sm:rounded-[40px] px-4 py-4 sm:px-16 bg-[#00814C] flex justify-between items-center">
+      <div className="w-full">
+        <div className="mt-10 sm:mt-20 rounded-2xl sm:rounded-[40px] px-4 py-4 sm:px-16 bg-[#00814C] flex justify-between items-center">
           <div className="text-white">
             <h2 className="text-[25px] sm:text-4xl font-bold">
               Invest with Confidence

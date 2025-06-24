@@ -6,15 +6,18 @@ export default function Button({
   bgColor,
   textColor,
   url = "https://www.marginplus.ng/",
+  className = ""
 }) {
   return (
-    <Link href={url} className="cursor-pointer" target="_blank">
-      <button
-        className="flex items-center cursor-pointer h-[49px] px-[32px] py-[18px] rounded-[10px] text-[13px] font-bold"
-        style={{ backgroundColor: bgColor, color: textColor }}
-      >
-        {text}
-      </button>
+    <Link
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`flex items-center justify-center border border-[#014F2A] h-[45px] px-[32px] py-[18px] rounded-[10.5px] text-[13px] font-bold cursor-pointer ${className}`}
+      style={{ backgroundColor: bgColor, color: textColor }}
+      aria-label={`Navigate to ${text}`}
+    >
+      {text}
     </Link>
   );
 }

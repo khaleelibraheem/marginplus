@@ -54,11 +54,19 @@ export default function Navbar() {
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
 
+    // Prevent body scroll when menu is open
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = 'unset';
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, isMenuOpen]);
 
   // Handle mobile menu link clicks
   const handleLinkClick = () => {
@@ -90,7 +98,7 @@ export default function Navbar() {
 
             {/* Hamburger menu moved to the right on mobile */}
             <motion.button
-              className="flex flex-col justify-center cursor-pointer sm:hidden"
+              className="flex flex-col justify-center cursor-pointer lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               initial={false}
               animate={isMenuOpen ? "open" : "closed"}
@@ -122,7 +130,7 @@ export default function Navbar() {
             </motion.button>
 
             {/* Desktop navigation links */}
-            <div className="hidden sm:flex space-x-5 items-center">
+            <div className="hidden lg:flex space-x-8 items-center">
               {navlinks.map((link) => (
                 <Link
                   className={`text-sm font-medium transition-colors ${
@@ -136,11 +144,16 @@ export default function Navbar() {
                   {link.linkName}
                 </Link>
               ))}
+              <div className="flex gap-3"><Button
+                text={"Log in"}
+                bgColor={"transparent"}
+                textColor={"#014F2A"}
+              />
               <Button
                 text={"Get Started"}
                 bgColor={"#014F2A"}
                 textColor={"white"}
-              />
+              /></div>
             </div>
           </nav>
         </div>
@@ -150,26 +163,29 @@ export default function Navbar() {
       <AnimatePresence>
         {isMenuOpen && (
           <>
+            {/* Enhanced Backdrop */}
             <motion.div
-              className="fixed inset-0 bg-black opacity-50 z-40 sm:hidden"
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
+              animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
               onClick={() => setIsMenuOpen(false)}
-            ></motion.div>
+            />
+            
+            {/* Mobile Menu Panel */}
             <motion.div
-              className="fixed right-0 top-0 h-full w-64 bg-white shadow-lg transform z-50 sm:hidden"
+              className="fixed right-0 top-0 h-full w-80 bg-white shadow-2xl transform z-50 lg:hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
-              <div className="flex flex-col p-6">
+              <div className="flex flex-col p-6 h-full">
                 <div className="flex justify-end mb-8">
                   <motion.button
                     onClick={() => setIsMenuOpen(false)}
-                    className="text-gray-600 hover:text-gray-900"
+                    className="text-gray-600 hover:text-gray-900 p-2 rounded-full hover:bg-gray-100"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -190,7 +206,7 @@ export default function Navbar() {
                   </motion.button>
                 </div>
 
-                <div className="flex flex-col space-y-6">
+                <div className="flex flex-col space-y-6 flex-1">
                   {navlinks.map((link, index) => (
                     <motion.div
                       key={link.linkName}
@@ -199,7 +215,7 @@ export default function Navbar() {
                       transition={{ delay: index * 0.1 }}
                     >
                       <Link
-                        className={`text-lg font-medium transition-colors ${
+                        className={`text-lg font-medium transition-colors block py-2 ${
                           pathname === link.href
                             ? "text-emerald-700 border-r-4 border-emerald-700 pr-2"
                             : "hover:text-emerald-700"
@@ -212,18 +228,31 @@ export default function Navbar() {
                     </motion.div>
                   ))}
 
-                  {/* Mobile Get Started button */}
-                  <motion.div
-                    initial={{ x: 50, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.5 }}
-                  >
-                    <Button
-                      text={"Get Started"}
-                      bgColor={"#014F2A"}
-                      textColor={"white"}
-                    />
-                  </motion.div>
+                  {/* Mobile buttons with better spacing */}
+                  <div className="mt-auto space-y-4 pt-8">
+                    <motion.div
+                      initial={{ x: 50, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ delay: 0.5 }}
+                    >
+                      <Button
+                        text={"Log in"}
+                        bgColor={"transparent"}
+                        textColor={"#014F2A"}
+                      />
+                    </motion.div>
+                    <motion.div
+                      initial={{ x: 50, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ delay: 0.6 }}
+                    >
+                      <Button
+                        text={"Get Started"}
+                        bgColor={"#014F2A"}
+                        textColor={"white"}
+                      />
+                    </motion.div>
+                  </div>
                 </div>
               </div>
             </motion.div>
