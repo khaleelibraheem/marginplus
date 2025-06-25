@@ -6,3 +6,31 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Default (mobile) */
+.bg-vector-lines {
+  background-image: url("/images/vector-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+/* Override for screen ≥ 640px */
+@media (min-width: 640px) {
+  .bg-vector-lines {
+    background-image: url("/images/vector.svg");
+     background-position: right;
+     width: 70%;
+  }
+}
+
+.bg-arrow {
+  background-image: url("/images/logo-arrow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  opacity: 1;
+}
+
+
+

@@ -3,11 +3,29 @@ import { OpportunitiesButton } from "../ui/OpportunitiesCard";
 
 export default function FeaturedSection() {
   return (
-    <section className="mt-[-10px] max-w-[1440px] mx-auto px-4 lg:px-6">
+    <section className="relative mt-[-10px] max-w-[1440px] mx-auto px-4 lg:px-6">
+      {/* Background Arrow in top-left */}
+      <div className="hidden lg:block absolute -top-[150px] -left-[20px] z-0 pointer-events-none w-[420px] h-[327px]">
+        <Image
+          src="/images/logo-arrow.png"
+          alt="arrow background"
+          width={474}
+          height={327}
+          className="w-full h-full object-contain"
+          priority
+        />
+      </div>
 
-      <div className="w-full">
-        <div className="mt-10 sm:mt-20 rounded-2xl sm:rounded-[40px] px-4 py-4 sm:px-16 bg-[#00814C] flex justify-between items-center">
-          <div className="text-white">
+      {/* Green box with diagonal lines */}
+      <div className="relative z-10 w-full">
+        <div className="mt-10 sm:mt-20 rounded-2xl sm:rounded-[40px] px-4 py-4 sm:px-16 bg-[#00814C] flex justify-between items-center max-h-[333px] overflow-hidden relative">
+          {/* Diagonal Lines */}
+          <div className="absolute inset-0 z-0">
+            <div className="h-full w-[70%] bg-vector-lines rounded-2xl sm:rounded-[40px]"></div>
+          </div>
+
+          {/* Text */}
+          <div className="text-white relative z-10">
             <h2 className="text-[25px] sm:text-4xl font-bold">
               Invest with Confidence
             </h2>
@@ -60,7 +78,9 @@ export default function FeaturedSection() {
               />
             </div>
           </div>
-          <div className="hidden sm:block">
+
+          {/* Shield */}
+          <div className="hidden sm:block relative z-10">
             <Image
               src={"/images/shield.png"}
               alt="check"
