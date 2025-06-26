@@ -2,7 +2,12 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export function OpportunitiesButton({ text, bgColor, textColor, url = "https://www.marginplus.ng/" }) {
+export function OpportunitiesButton({
+  text,
+  bgColor,
+  textColor,
+  url = "https://www.marginplus.ng/",
+}) {
   return (
     <Link href={url} className="cursor-pointer" target="_blank">
       <button
@@ -28,12 +33,17 @@ export default function OpportunitiesCard({
 }) {
   return (
     <div
-      className="flex justify-between px-4 pt-6 pb-7 gap-5 w-full rounded-xl flex-1"
+      className="flex justify-between px-4 pt-6 pb-7 gap-5 w-full rounded-xl flex-1 sm:h-[255px] lg:h-auto"
       style={{ backgroundColor: bgColor }}
     >
-      <div style={{ color: textColor }} className="max-w-[180px] md:max-w-[202px]">
-        <h3 className="font-semibold text-xl">{title}</h3>
-        <p className="text-sm mt-2 sm:text-base">{description}</p>
+      <div
+        style={{ color: textColor }}
+        className="max-w-[180px] md:max-w-[202px] flex flex-col justify-between"
+      >
+        <div>
+          <h3 className="font-semibold text-xl">{title}</h3>
+          <p className="text-sm mt-2 sm:text-base">{description}</p>
+        </div>
         <div className="mt-5">
           <OpportunitiesButton
             text="Learn more"

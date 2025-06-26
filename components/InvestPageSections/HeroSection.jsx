@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section className="mt-32 mx-auto">
       <div className="max-w-[350px] sm:max-w-[640px] mx-auto flex flex-col items-center">
-        <h1 className="text-3xl sm:text-4xl font-bold">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center">
           Invest Ethically & <br className="sm:hidden" />{" "}
           <span className="text-[#008647]">Grow Confidently</span>
         </h1>

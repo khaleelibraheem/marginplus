@@ -47,7 +47,7 @@ export default function SmartInvestorsSection() {
       </div>
 
       {/* Cards */}
-      <div className="px-4 lg:px-10 mt-10 grid grid-cols-1 lg:grid-cols-4 place-items-center gap-5 lg:gap-0">
+      <div className="px-4 mt-10 flex flex-wrap justify-center gap-5">
         {investorCardData.map((card) => (
           <SmartInvestorsCard
             key={card.id}

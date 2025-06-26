@@ -22,10 +22,10 @@ const avatars = [
 
 export default function SmartFarmers() {
   return (
-    <section className="max-w-[1400px] mx-auto px-4 mt-20">
+    <section className="max-w-[1400px] mx-auto px-4 mt-20 flex flex-col items-center">
       <div className="flex flex-col lg:flex-row justify-between items-start gap-8 py-10">
         {/* Left Section */}
-        <div className="max-w-[504px]">
+        <div className="max-w-[520px]">
           <h2 className="text-[36px] md:text-4xl font-medium text-[#008647] leading-snug">
             Smart Farmers & Investors Use <br className="hidden md:block" />{" "}
             Marginplus
@@ -35,7 +35,7 @@ export default function SmartFarmers() {
             raise funds to buy equipment, expand operations, and access better
             markets without relying on traditional loans.
           </p>
-          <div className="mt-4 w-[108px] flex items-center gap-2 text-sm font-medium opacity-80 cursor-pointer group">
+          <div className="mt-4 w-[120px] flex items-center gap-2 text-sm font-medium opacity-80 cursor-pointer group">
             Learn more
             <ArrowRight
               className="group-hover:translate-x-1 transition-transform"
