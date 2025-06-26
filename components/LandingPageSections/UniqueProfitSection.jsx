@@ -9,7 +9,7 @@ export default function UniqueProfitSection() {
           <h2 className="text-center font-bold text-[24px] lg:text-[40px] lg:text-[#014F2A] lg:font-semibold opacity-80 leading-7 lg:leading-normal">
             Our Unique Profit Sharing Model
           </h2>
-          <p className="text-sm font-bold opacity-80">
+          <p className="text-sm font-bold opacity-80 mt-2 lg:mt-0">
             We don’t do fixed interest.
           </p>
           <p className="hidden lg:block text-sm text-center leading-5 mt-2">
@@ -18,7 +18,7 @@ export default function UniqueProfitSection() {
             deeply rooted in African values of trust, community, and shared
             prosperity.
           </p>
-          <p className="lg:hidden text-center text-sm">Our model lets you earn directly from the success of the farms you invest in, not just promises.</p>
+          <p className="lg:hidden text-center text-sm mt-1 lg:mt-0">Our model lets you earn directly from the success of the farms you invest in, not just promises.</p>
         </div>
       </div>
     </section>
