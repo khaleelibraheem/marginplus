@@ -24,8 +24,9 @@ const avatars = [
 
 export default function AppDownloadSection() {
   return (
-    <section className="mt-20 md:mt-52 flex flex-col md:flex-row justify-center bg-transparent md:bg-[#004D2E] items-center md:h-[300px] md:items-end md:gap-2">
-      <div>
+    <section className="mt-20 lg:mt-60 lg:bg-[#004D2E]">
+      {/* Phone mockup - positioned above green background on mobile/tablet */}
+      <div className="flex justify-center lg:hidden">
         <Image
           src={"/images/phone-mockup2.png"}
           alt="iphone"
@@ -34,18 +35,36 @@ export default function AppDownloadSection() {
           priority
         />
       </div>
-      <div className="bg-[#004D2E] self-start p-5 md:max-w-[450px]">
-        <h3 className="text-2xl leading-7 font-semibold text-white">
-          Thousands of Africans are already transforming their financial future
-          <br /> with
-          <span className="text-[#B2FF96]"> Marginplus.</span>
-        </h3>
-        <div className="mt-2 mb-3 md:mt-6">
-          <Avatars avatarUrls={avatars} />
+
+      <div className="bg-[#004D2E] max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center">
+        {/* Phone mockup - extends above the green background on desktop */}
+        <div className="hidden lg:block lg:-mt-44 lg:ml-32">
+          <Image
+            src={"/images/phone-mockup2.png"}
+            alt="iphone"
+            height={350}
+            width={350}
+            priority
+          />
         </div>
-        <div className="flex gap-3 mt-2 md:mt-6">
-          <AppDownloadButton url={"/images/googleplay-white.svg"} />
-          <AppDownloadButton url={"/images/appstore-white.svg"} />
+        
+        {/* Content section */}
+        <div className="p-[20px] lg:px-8 lg:pb-0 lg:py-0 flex-1 max-w-xl">
+          <h3 className="text-2xl lg:text-3xl leading-tight font-semibold text-white mb-6">
+            Thousands of Africans are already transforming their financial future
+            {" "}
+            with{" "}
+            <span className="text-[#B2FF96]">Marginplus.</span>
+          </h3>
+          
+          <div className="mb-8">
+            <Avatars avatarUrls={avatars} />
+          </div>
+          
+          <div className="flex gap-4">
+            <AppDownloadButton url={"/images/googleplay-white.svg"} />
+            <AppDownloadButton url={"/images/appstore-white.svg"} />
+          </div>
         </div>
       </div>
     </section>

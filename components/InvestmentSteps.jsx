@@ -29,11 +29,11 @@ const steps = [
 
 const InvestmentSteps = () => {
   return (
-    <div className="mt-10 grid grid-cols-1 lg:grid-cols-4 gap-6 place-items-center">
+    <div className="mt-10 flex flex-col sm:flex-row flex-wrap gap-6 justify-center items-center">
       {steps.map((step, index) => (
         <div
           key={index}
-          className={`rounded-[28px] w-full lg:w-[292px] py-[20px] px-[21px] ${step.bg} hover:bg-[#B2FF96] transition-colors duration-300`}
+          className={`rounded-[28px] flex-1 min-w-[280px] max-w-[320px] py-[20px] px-[21px] ${step.bg} hover:bg-[#B2FF96] transition-colors duration-300 flex flex-col h-full`}
         >
           <img
             src={step.img}
@@ -43,7 +43,7 @@ const InvestmentSteps = () => {
           <h3 className="text-[20px] font-bold text-[#008647] mb-2">
             {step.title}
           </h3>
-          <p className="text-sm opacity-80">{step.description}</p>
+          <p className="text-sm opacity-80 flex-grow">{step.description}</p>
         </div>
       ))}
     </div>
