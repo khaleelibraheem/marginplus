@@ -5,6 +5,12 @@ import TimeLineSection from '@/components/RaisePageSections/TimeLineSection'
 import ReadyToBePartSection from '@/components/ReadyToBePartSection'
 import React from 'react'
 
+export const metadata = {
+  title: ' Raise Funds for Your Agribusiness ',
+  description:
+    ' Need funding for your agribusiness? Partner with Marginplus to access capital, support, and market access. Fast onboarding, real investors.',
+}
+
 export default function page() {
   return (
    <main>

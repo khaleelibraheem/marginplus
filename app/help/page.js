@@ -1,10 +1,15 @@
 import AppDownloadSection from '@/components/AppDownloadSection'
-import ComingSoonPage from '@/components/ComingSoonPage'
 import FAQSection from '@/components/HelpPageSections/FAQSection'
 import HeroSection from '@/components/HelpPageSections/HeroSection'
 import React from 'react'
 
-export default function page() {
+export const metadata = {
+  title: 'Marginplus Help Center – FAQs, Support & Investor Guidance',
+  description:
+    'Need assistance? Explore our help center for FAQs, support articles, and guides for investors and agribusiness partners on Marginplus.',
+}
+
+export default function Page() {
   return (
     <main>
       <HeroSection />

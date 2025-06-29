@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../ui/Button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -22,11 +23,12 @@ export default function HeroSection() {
             textColor={"white"}
             url="https://www.partner.marginplus.ng/register"
           />
-          <Button
-            text={"Get in touch"}
-            bgColor={"transparent"}
-            textColor={"#014F2A"}
-          />
+          <Link
+            href="/help"
+            className="inline-block text-[#014F2A] bg-transparent h-[45px] px-[32px] py-[18px] rounded-[10.5px] text-[13px] font-bold cursor-pointer"
+          >
+            Get in touch
+          </Link>
         </div>
       </div>
 
