@@ -19,7 +19,7 @@ export default function HeroSection() {
           <AppDownloadButton url={"/images/appstore.svg"} />
         </div>
 
-        <div className="mt-1 sm:mt-4 flex items-center justify-center sm:justify-start gap-1">
+        {/* <div className="mt-1 sm:mt-4 flex items-center justify-center sm:justify-start gap-1">
           <Image
             src={"/images/SEC-badge.svg"}
             alt="SEC-badge"
@@ -32,7 +32,7 @@ export default function HeroSection() {
         </div>
         <p className="sm:mt-1 text-center sm:text-left text-[12px] font-medium">
           We are SEC Licensed as a crowdfunding intermediary
-        </p>
+        </p> */}
         {/* Mobile Image */}
         <div className="mt-5 lg:hidden w-full h-auto px-4">
           <Image

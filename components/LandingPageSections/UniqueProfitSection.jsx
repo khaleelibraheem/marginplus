@@ -9,9 +9,9 @@ export default function UniqueProfitSection() {
           <h2 className="text-center font-bold text-[24px] lg:text-[40px] lg:text-[#014F2A] lg:font-semibold opacity-80 leading-7 lg:leading-normal">
             Our Unique Profit Sharing Model
           </h2>
-          <p className="text-sm font-bold opacity-80 mt-2 lg:mt-0">
+          {/* <p className="text-sm font-bold opacity-80 mt-2 lg:mt-0">
             We don’t do fixed interest.
-          </p>
+          </p> */}
           <p className="hidden lg:block text-sm text-center leading-5 mt-2">
             We share real profits with you because we believe wealth should grow
             with you, not just from you. Our model is fair, transparent, and

@@ -148,6 +148,7 @@ export default function Navbar() {
                 text={"Log in"}
                 bgColor={"transparent"}
                 textColor={"#014F2A"}
+                bordered
               />
               <Button
                 text={"Get Started"}

@@ -15,7 +15,7 @@ export default function HeroSection() {
           backed by real assets, regulated by the SEC, and designed to drive
           measurable impact across communities and industries.
         </p>
-        <div className="mt-5">
+        <div className="mt-5 flex ">
           <Button text={"Learn more"} bgColor={"#014F2A"} textColor={"white"} />
           <Button
             text={"Contact Us"}

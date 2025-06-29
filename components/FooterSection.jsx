@@ -126,7 +126,7 @@ export default function FooterSection() {
           <p className="text-[13px] font-light text-[#014E2F]">
             Marginplus is a leading crowdfunding investment platform in Nigeria
           </p>
-          <p className="text-[13px] font-light text-[#014E2F]">
+          {/* <p className="text-[13px] font-light text-[#014E2F]">
             Marginplus Finance Limited is duly licensed by the Securities and
             Exchange Commission (SEC) of Nigeria.{" "}
             <span className="font-semibold">
@@ -134,7 +134,7 @@ export default function FooterSection() {
                 <span>Check here</span>
               </Link>
             </span>
-          </p>
+          </p> */}
           <p className="text-[13px] font-light text-[#014E2F]">
             2024-2025 Marginplus Technologies Ltd - RC 773240
           </p>

@@ -22,7 +22,7 @@ const avatars = [
 
 export default function SmartFarmers() {
   return (
-    <section className="max-w-[1400px] mx-auto px-4 mt-20 flex flex-col items-center">
+    <section className="max-w-[1400px] mx-auto px-4 mt-20">
       <div className="flex flex-col lg:flex-row justify-between items-start gap-8 py-10">
         {/* Left Section */}
         <div className="max-w-[520px]">

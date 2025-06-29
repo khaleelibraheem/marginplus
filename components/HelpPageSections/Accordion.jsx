@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export default function Accordion() {
-  const [openItem, setOpenItem] = useState("is-my-money-safe");
+  const [openItem, setOpenItem] = useState("what-is-marginplus");
   const [activeTab, setActiveTab] = useState("general");
 
   const faqData = {

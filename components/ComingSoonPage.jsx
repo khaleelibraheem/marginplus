@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ComingSoonPage() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mt-20">
       <main className="flex-grow flex items-center justify-center px-4 sm:px-10 py-12">
         <div className="max-w-3xl mx-auto w-full text-center">
           <div className="inline-block px-4 py-2 rounded-full bg-[#e8f5ec] text-[#014F2A] font-medium text-sm mb-6">
