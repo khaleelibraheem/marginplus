@@ -58,7 +58,7 @@ export const metadata = {
   title: "Marginplus: Smartly Invest in Nigerian Agriculture",
   description: "Secure, high-return agricultural investments in Nigeria. Our platform offers vetted opportunities with up to 35% returns, combining profit with impact.",
   openGraph: {
-    images: 'https://marginplus.ng/og-marginplus.png',
+    images: '/images/og-image.png',
 },
   keywords: [
     "Agricultural investment Nigeria", 
