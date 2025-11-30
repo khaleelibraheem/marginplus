@@ -3,7 +3,7 @@ import React from "react";
 
 export default function OurVisionSection() {
   return (
-    <section className="mt-20 flex flex-col gap-20 sm:items-center md:px-4">
+    <section className="mt-20 flex flex-col gap-20 sm:items-center md:px-4 border border-red-500">
       <div className="flex flex-col lg:flex-row sm:justify-center sm:items-center lg:gap-20">
         <div className="w-full sm:w-[399px]">
           <Image
@@ -53,7 +53,7 @@ export default function OurVisionSection() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row sm:justify-center sm:items-center lg:gap-20">
+      <div className="flex flex-col lg:flex-row sm:justify-center sm:items-center lg:gap-20 border border-blue-500">
         <div className="w-full sm:w-[399px]">
           <Image
             src={"/images/vision-3.png"}

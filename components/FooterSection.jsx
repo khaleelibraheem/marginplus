@@ -4,10 +4,21 @@ import Link from "next/link";
 const footerData = {
   contact: {
     logo: "/images/logo.png",
-    address: `Block No 4, Antonio Gek plaza,\nWuse, Zone II, Abuja, Nigeria`,
-    email: "hi@marginplusgroup.com",
-    phone: "+234-704333-2374",
+    rc: "RC No 7732340",
+    co: "Co-owned by farmers 💚",
+    bu: "Building Africa's next generation of farming communities.",
+    address: `Gombe State, Nigeria`,
+    email: "info@marginplusgroup.com",
+    phone: "+234-8129874-930",
     socials: [
+        {
+        href: "https://www.linkedin.com/company/marginplusgroup/",
+        icon: "/images/linkedin.svg",
+      },
+       {
+        href: "https://www.instagram.com/marginplus_ng",
+        icon: "/images/instagram.svg",
+      },
       {
         href: "https://www.facebook.com/marginplusgrp",
         icon: "/images/facebook.svg",
@@ -16,55 +27,44 @@ const footerData = {
         href: "https://x.com/marginplus_ng",
         icon: "/images/x.svg",
       },
-      {
-        href: "https://www.instagram.com/marginplus_ng",
-        icon: "/images/instagram.svg",
-      },
-      {
-        href: "https://www.linkedin.com/company/marginplusgroup/",
-        icon: "/images/linked.svg",
-      },
+     
+    
     ],
   },
   links: [
     {
       title: "Company",
       items: [
+        { label: "Home", href: "/" },
         { label: "About Us", href: "/about-us" },
         { label: "Help", href: "/help" },
-        { label: "Careers", href: "/careers" },
+        { label: "Contact", href: "#" },
       ],
     },
     {
-      title: "Invest In",
+      title: "Our Resources",
       items: [
-        { label: "Crop Farming", href: "#" },
-        { label: "Livestock Farming", href: "#" },
-        { label: "Agro-processing", href: "#" },
+        { label: "Reports", href: "#" },
+        { label: "FAQ's", href: "#" },
+        { label: "Gallery", href: "#" },
+        { label: "X Twitter", href: "#" },
       ],
     },
     {
-      title: "Explore",
+      title: "Socials",
       items: [
         {
-          label: "Join Our Tribe",
-          href: "https://t.me/+n032fdD6bZViNzA0",
+          label: "LinkedIn",
+          href: "#",
           external: true,
         },
-        { label: "Suggestion?", href: "#" },
+        { label: "Facebook", href: "#" },
         {
-          label: "Blog",
-          href: "http://blog.marginplus.ng",
+          label: "Instagram",
+          href: "#",
           external: true,
         },
-      ],
-    },
-    {
-      title: "Legal",
-      items: [
-        { label: "Terms & Condition", href: "#" },
-        { label: "Privacy Policy", href: "#" },
-        { label: "Disclosure", href: "#" },
+        { label: "X Twitter", href: "#" },
       ],
     },
   ],
@@ -72,9 +72,9 @@ const footerData = {
 
 export default function FooterSection() {
   return (
-    <section className="px-4 pt-8 pb-14 bg-[#B2FF96]">
+    <section className="px-4 pt-8 pb-8 bg-[#B2FF96] mt-20">
       <div className="max-w-[1400px] mx-auto">
-        <div className="flex md:justify-between md:gap-9 flex-wrap md:flex-nowrap gap-4">
+        <div className="flex md:justify-between md:gap-9 flex-wrap md:flex-nowrap gap-8 lg:gap-4 text-[14px]">
           <div className="text-[#292C32] font-medium">
             <Image
               src={footerData.contact.logo}
@@ -82,12 +82,11 @@ export default function FooterSection() {
               width={150}
               height={150}
             />
-            <p className="mt-2 whitespace-pre-line">
-              {footerData.contact.address}
-            </p>
-            <p className="mt-5">{footerData.contact.email}</p>
-            <p className="mt-4">{footerData.contact.phone}</p>
-            <div className="flex gap-5 mt-4 mb-5 md:mb-2">
+            <p className="mt-5 text-sm">{footerData.contact.rc}</p>
+            <p className="mt-3 text-sm">{footerData.contact.co}</p>
+            <p className="max-w-[316px] lg:max-w-[372px] text-sm">{footerData.contact.bu}</p>
+
+            <div className="flex gap-2 mt-8 mb-5 md:mb-2">
               {footerData.contact.socials.map(({ href, icon }, idx) => (
                 <Link
                   key={idx}
@@ -95,13 +94,19 @@ export default function FooterSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image src={icon} alt="icon" height={20} width={20} />
+                  <Image src={icon} alt="icon" height={33} width={33} className="w-[33.18px] h-[33.18px]" />
                 </Link>
               ))}
             </div>
+            <p className="mt-2 text-[14px]">{footerData.contact.address}</p>
+            <p className="mt-3">{footerData.contact.phone}</p>
+
+            <p className="">
+              <a href="mailto:hi@marginplus.ng">{footerData.contact.email}</a>
+            </p>
           </div>
 
-          <div className="flex flex-wrap gap-7 font-medium text-[#292C32]">
+          <div className="flex flex-wrap gap-14 lg:gap-12 font-medium text-[#292C32]">
             {footerData.links.map((section, idx) => (
               <div key={idx} className="flex flex-col gap-3">
                 <h4 className="font-semibold">{section.title}</h4>
@@ -120,23 +125,11 @@ export default function FooterSection() {
           </div>
         </div>
 
-        <hr className="w-[70%] border-[#292C32] opacity-20 hidden md:block" />
+        <hr className="w-full mt-10 border-[#292C32] opacity-20 hidden md:block" />
 
         <div className="mt-10 flex flex-col gap-4">
-          <p className="text-[13px] font-light text-[#014E2F]">
-            Marginplus is a leading crowdfunding investment platform in Nigeria
-          </p>
-          {/* <p className="text-[13px] font-light text-[#014E2F]">
-            Marginplus Finance Limited is duly licensed by the Securities and
-            Exchange Commission (SEC) of Nigeria.{" "}
-            <span className="font-semibold">
-              <Link href="#">
-                <span>Check here</span>
-              </Link>
-            </span>
-          </p> */}
-          <p className="text-[13px] font-light text-[#014E2F]">
-            2024-2025 Marginplus Technologies Ltd - RC 773240
+          <p className="text-[13px] font-light text-[#014E2F] text-center">
+            &copy; 2025 Marginplus Group. All rights reserved.
           </p>
         </div>
       </div>

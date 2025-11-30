@@ -11,8 +11,8 @@ export default function HeroSection() {
           <span className="text-[#008647]">Grow Confidently</span>
         </h1>
         <p className="max-w-[484px] mt-6 text-sm text-center leading-5 font-medium">
-          Halal, secure, and impact-driven. Start with as little as ₦20,000 and
-          earn up to 35% profit sharing returns
+          Halal, secure, and impact-driven. Start with as little as ₦25,000 and
+          earn up to 37% profit sharing returns
         </p>
         <div className="mt-5 flex gap-3">
           <AppDownloadButton url={"/images/googleplay.svg"} />

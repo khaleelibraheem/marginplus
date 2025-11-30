@@ -21,7 +21,7 @@ export default function HeroSection() {
             text={"Apply for funding"}
             bgColor={"#014F2A"}
             textColor={"white"}
-            url="https://www.partner.marginplus.ng/register"
+            url="/waitlist"
           />
           <Link
             href="/help"

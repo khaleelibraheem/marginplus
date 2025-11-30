@@ -1,19 +1,24 @@
 {
-  "name": "marginplus",
+  "name": "marginplus-v2",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+   "dev": "next dev -p 4400",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^1.10.0",
+    "formik": "^2.4.6",
     "framer-motion": "^12.11.4",
     "lucide-react": "^0.510.0",
     "next": "15.3.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "react-toastify": "^11.0.5",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

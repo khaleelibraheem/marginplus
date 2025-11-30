@@ -1,108 +1,127 @@
+"use client";
+
 import Image from "next/image";
-import AppDownloadButton from "../ui/AppDownloadButton";
+import { useState, useEffect } from "react";
+import Marquee from "../ui/Marquee";
 
 export default function HeroSection() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const images = [
+    { src: "/images/hero1.png", alt: "Farmers working together" },
+    { src: "/images/hero2.png", alt: "Agricultural community" },
+  ];
+
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, images.length]);
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+    setIsAutoPlaying(false);
+  };
+
   return (
-    <section className="mt-32 max-w-[1400px] mx-auto">
-      <div className="flex flex-col items-center lg:flex-row lg:px-10">
-        {/* Hero Left */}
-        <div className="px-8 flex-1/2">
-          <h1 className="text-5xl lg:text-[70px] text-center lg:text-left font-semibold text-[#014F2A] leading-11 lg:leading-[58px] capitalize lg:normal-case">
-            Invest smart, <br /> in African <br /> agriculture
-          </h1>
-          <p className="font-medium text-[16px] text-center lg:text-left mt-4 leading-4 max-w-[450px] lg:text-[#014F2A]">
-            Grow your wealth by investing in profitable, secure and
-            Impact-driven ventures.
-          </p>
-          <div className="mt-5 flex items-center justify-center lg:justify-start gap-4">
-            <AppDownloadButton url={"/images/googleplay-green.svg"} />
-            <AppDownloadButton url={"/images/appstore-green.svg"} />
+    <section className="mt-32">
+      <div className="max-w-[817px] mx-auto flex flex-col items-center px-4">
+        <h1 className="text-[28px] lg:text-[46px] font-bold text-center">
+          Co-Owned by <span className="text-secondary">Farmers</span>
+        </h1>
+        <p className="mt-4 text-center text-[20px] lg:text-[24px] text-gray-700">
+          Connecting Africa's farming communities to the training, finance, and
+          markets they need to thrive.
+        </p>
+        <button className="mt-6 rounded-[13px] py-[14.57px] px-[25.91px] bg-primary lg:rounded-2xl lg:py-[18px] lg:px-[32px] text-white text-[16px] lg:text-2xl hover:bg-primary/90 transition-colors cursor-pointer">
+          Partner with Us
+        </button>
+      </div>
+
+      <div className="relative">
+        {/* Backdrop Logo on Mobile */}
+        <Image
+          src={"/images/mobile-backdrop.png"}
+          width={390}
+          height={255}
+          alt="logo"
+          className="lg:hidden absolute object-contain -top-20 -z-10 w-full h-[450px] opacity-60"
+        />
+        {/* Backdrop Logo on Desktop  */}
+        <Image
+          src={"/images/logo-backdrop.png"}
+          width={1800}
+          height={455}
+          alt="logo"
+          className="hidden lg:block absolute object-contain -top-25 -z-10 opacity-25 w-full"
+        />
+
+        {/* Carousel on Mobile */}
+        <div className="lg:hidden mt-16 relative max-w-6xl mx-auto px-4">
+          {/* Main Carousel Container */}
+          <div className="relative overflow-hidden rounded-[20px]">
+            {/* Images */}
+            <div
+              className="flex transition-transform duration-700 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {images.map((image, index) => (
+                <div key={index} className="min-w-full">
+                  <div className="relative w-full min-h-[239.54px]">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          {/* <div className="flex flex-col items-center justify-center lg:items-start mt-2">
-            <Image
-              src={"/images/sec.svg"}
-              alt="SEC-badge"
-              height={37}
-              width={129}
-            />
-            <p className="mt-1 text-center lg:text-left text-[12px]">
-              We are SEC Licensed as a crowdfunding intermediary
-            </p>
-          </div> */}
+          {/* Dots Indicator */}
+          <div className="flex mt-5 justify-center gap-1">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`h-3 rounded-full transition-all ${
+                  currentSlide === index
+                    ? "w-8 bg-primary"
+                    : "w-3 bg-primary/50 hover:bg-primary/75"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
-        {/* Hero Right */}
-        <div className="w-full flex-1/2">
-          {/* Mobile Image */}
+
+        {/* Fixed Image on Desktop */}
+        <div className="hidden mt-16 lg:flex justify-center gap-3">
           <Image
-            src={"/images/landing-mobile.png"}
-            alt="SEC-badge"
-            height={348}
-            width={378}
-            className="w-full lg:hidden max-h-[350px] max-w-[380px] mx-auto"
+            src={"/images/hero1.png"}
+            width={500}
+            height={500}
+            alt="hero-image"
           />
-          {/* Desktop Image */}
           <Image
-            src={"/images/landing.svg"}
-            alt="SEC-badge"
-            height={348}
-            width={378}
-            className="w-full hidden lg:block max-h-[471px] max-w-[570px]"
+            src={"/images/hero2.png"}
+            width={500}
+            height={500}
+            alt="hero-image"
           />
         </div>
       </div>
-      <div className="py-4 flex justify-center items-center">
-        {/* Mobile Logos(Smaller in Size) */}
-        <div className="flex sm:hidden gap-5 items-center">
-          <Image
-            src={"/images/techcabal.png"}
-            alt="techcabal"
-            height={120}
-            width={120}
-            priority
-            className="w-[20px]"
-          />
-          <Image
-            src={"/images/bbc-logo.svg"}
-            alt="bbc-logo"
-            height={60}
-            width={60}
-            priority
-          />
-          <Image
-            src={"/images/disruptafrica.png"}
-            alt="disruptafrica"
-            height={50}
-            width={50}
-            priority
-            className="h-[30px] w-[65px]"
-          />
-        </div>
 
-        {/* Desktop Logos(Bigger in Size) */}
-        <div className="hidden sm:flex gap-8 items-center">
-          <Image
-            src={"/images/techcabal.png"}
-            alt="techcabal"
-            height={150}
-            width={150}
-            priority
-            className="w-[40px]"
-          />
-          <Image
-            src={"/images/bbc-logo.svg"}
-            alt="bbc"
-            height={90}
-            width={90}
-            priority
-          />
-          <Image
-            src={"/images/disruptafrica.png"}
-            alt="disruptafrica"
-            height={80}
-            width={80}
-            priority
-          />
-        </div>
+      <div className="max-w-[691.4px] mx-auto mt-20 lg:mt-14 text-center">
+        <h2 className="text-[24px] font-bold">Trusted By Leading Partners</h2>
+
+        {/* Marquee */}
+        <Marquee />
       </div>
     </section>
   );

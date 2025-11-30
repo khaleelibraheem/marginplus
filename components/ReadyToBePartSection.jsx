@@ -28,7 +28,8 @@ export default function ReadyToBePartSection() {
           </p>
 
           <Link
-            href="https://www.marginplus.ng/"
+            href="/waitlist"
+            target="_blank"
             className="cursor-pointer mt-5 md:mt-0 md:self-baseline-last"
           >
             <button className="flex items-center cursor-pointer h-[49px] px-[32px] py-[18px] rounded-[10px] text-[13px]  w-[156px] bg-[#014F2A] text-white font-bold">

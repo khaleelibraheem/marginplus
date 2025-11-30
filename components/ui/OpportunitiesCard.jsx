@@ -6,7 +6,7 @@ export function OpportunitiesButton({
   text,
   bgColor,
   textColor,
-  url = "https://www.marginplus.ng/",
+  url = "/waitlist",
 }) {
   return (
     <Link href={url} className="cursor-pointer" target="_blank">

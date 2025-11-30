@@ -8,21 +8,25 @@ export default function MeetTheTeamSection() {
       name: "Zunnuraini Aliyu",
       role: "CEO & Co-founder",
       image: "/images/zunnuraini.png",
+      linkedin: "https://www.linkedin.com/in/zunnurainialiyu"
     },
     {
-      name: "Stepehen Echero",
+      name: "Stephen Echeruo",
       role: "CTO/ Co-founder",
       image: "/images/stephen.png",
+      linkedin: "https://www.linkedin.com/in/st-stephen"
     },
     {
       name: "Aliyu M Garba",
       role: "Investment Officer/ Director",
       image: "/images/aliyu.png",
+      linkedin: "#"
     },
     {
       name: "Mansur Nura",
       role: "Compliance/ Legal Director",
       image: "/images/mansur.png",
+      linkedin: "#"
     },
   ];
 
@@ -56,7 +60,7 @@ export default function MeetTheTeamSection() {
               <h4 className="font-bold text-[16px]">{member.name}</h4>
               <p className="text-sm opacity-60 mt-2">{member.role}</p>
               <div className="mt-1">
-                <Link href={"#"} className="flex gap-3 items-center w-[84px]">
+                <Link href={member.linkedin} target="_blank" className="flex gap-3 items-center w-[84px]">
                   <Image
                     src={"/images/linkedin-blue.svg"}
                     width={100}

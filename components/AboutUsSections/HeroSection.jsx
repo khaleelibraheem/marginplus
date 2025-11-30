@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import BackedBySection from "../LandingPageSections/BackedBySection";
 
 export default function HeroSection() {
   return (
@@ -27,7 +26,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <BackedBySection />
+      {/* <BackedBySection /> */}
     </section>
   );
 }

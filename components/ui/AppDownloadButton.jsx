@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AppDownloadButton({ url }) {
   return (
-    <Link href="https://www.marginplus.ng/">
+    <Link href="/waitlist">
       <button className="cursor-pointer w-[152px] h-[47px]">
         <Image
           src={url}

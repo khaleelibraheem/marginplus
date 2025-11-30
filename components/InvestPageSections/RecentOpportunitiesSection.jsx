@@ -10,7 +10,7 @@ export default function RecentOpportunitiesSection() {
       returnRate: "Up to 8% in 3 months",
       riskLevel: "High Risk",
       investorCount: "1,432",
-      price: "₦20,000"
+      price: "₦25,000"
     },
     {
       id: 2,

@@ -1,8 +1,10 @@
+/** @format */
+
 import localFont from "next/font/local";
 import "./globals.css";
 import HeaderSection from "@/components/HeaderSection";
 import FooterSection from "@/components/FooterSection";
-
+import Image from "next/image";
 
 const Gilroy = localFont({
   src: [
@@ -55,17 +57,26 @@ const Gilroy = localFont({
 });
 
 export const metadata = {
-  title: "Marginplus: Smartly Invest in Nigerian Agriculture",
-  description: "Secure, high-return agricultural investments in Nigeria. Our platform offers vetted opportunities with up to 35% returns, combining profit with impact.",
+  title: "Marginplus Group",
+  description:
+    "Marginplus organizes farmers into structured clusters and connects them to training, finance, insurance, and premium markets.",
   openGraph: {
-    images: '/images/og-image.png',
-},
+    images: "/images/og-image.png",
+  },
   keywords: [
-    "Agricultural investment Nigeria", 
-    "Invest in Nigerian agriculture",
-    "SEC licenced investments Nigeria", 
-    "Secure agriculture investment platforms",
-    "Impactful opportunities Nigeria"
+    "Marginplus Group",
+    "structured farming clusters",
+    "agriculture clusters Nigeria",
+    "farmer training",
+    "agri finance",
+    "farm input financing",
+    "crop insurance Nigeria",
+    "agriculture market access",
+    "premium buyers agriculture",
+    "smallholder farmers",
+    "agri community development",
+    "agri tech Nigeria",
+    "agriculture support services",
   ],
 };
 export default function RootLayout({ children }) {
