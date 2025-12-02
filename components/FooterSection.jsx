@@ -9,11 +9,11 @@ const footerData = {
     bu: "Building Africa's next generation of farming communities.",
     address: `Gombe State, Nigeria`,
     email: "info@marginplusgroup.com",
-    phone: "+234-8129874-930",
+    phone: "+234 (0) 81 2987 4930",
     socials: [
         {
         href: "https://www.linkedin.com/company/marginplusgroup/",
-        icon: "/images/linkedin.svg",
+        icon: "/images/linked.svg",
       },
        {
         href: "https://www.instagram.com/marginplus_ng",
@@ -74,7 +74,7 @@ export default function FooterSection() {
   return (
     <section className="px-4 pt-8 pb-8 bg-[#B2FF96] mt-20">
       <div className="max-w-[1400px] mx-auto">
-        <div className="flex md:justify-between md:gap-9 flex-wrap md:flex-nowrap gap-8 lg:gap-4 text-[14px]">
+        <div className="flex md:justify-between md:gap-9 flex-wrap md:flex-nowrap gap-8 lg:gap-8 text-[14px] lg:items-center">
           <div className="text-[#292C32] font-medium">
             <Image
               src={footerData.contact.logo}
@@ -94,7 +94,7 @@ export default function FooterSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image src={icon} alt="icon" height={33} width={33} className="w-[33.18px] h-[33.18px]" />
+                  <Image src={icon} alt="icon" height={33} width={33} className="w-[25px] h-[25px]" />
                 </Link>
               ))}
             </div>
@@ -106,7 +106,7 @@ export default function FooterSection() {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-14 lg:gap-12 font-medium text-[#292C32]">
+          <div className="flex flex-wrap gap-14 lg:gap-18 font-medium text-[#292C32]">
             {footerData.links.map((section, idx) => (
               <div key={idx} className="flex flex-col gap-3">
                 <h4 className="font-semibold">{section.title}</h4>

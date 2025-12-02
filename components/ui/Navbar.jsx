@@ -49,6 +49,7 @@ export default function Navbar() {
         setIsScrolled(false);
       }
 
+      // Hide navbar on scroll down, show on scroll up
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
         setIsResourcesOpen(false);
@@ -62,16 +63,24 @@ export default function Navbar() {
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
 
+    // --- SMOOTH SCROLL LOCK LOGIC ---
     if (isMenuOpen) {
+      // Calculate scrollbar width to prevent layout shift
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
       document.body.style.overflow = "hidden";
     } else {
+      document.body.style.paddingRight = "0px";
       document.body.style.overflow = "unset";
     }
 
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
+      // Cleanup styles
       document.body.style.overflow = "unset";
+      document.body.style.paddingRight = "0px";
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
@@ -96,11 +105,14 @@ export default function Navbar() {
     setIsMobileResourcesOpen(false);
   };
 
+  // Custom Easing for a "Premium" smooth feel
+  const smoothEase = [0.33, 1, 0.68, 1]; // Cubic bezier
+
   return (
     <>
       <div
         className={`
-          fixed top-0 left-0 right-0 z-20 transition-all duration-300 
+          fixed top-0 left-0 right-0 z-40 transition-all duration-300 
           ${isScrolled ? "shadow-sm bg-white" : "bg-white"}
           ${isVisible ? "translate-y-0" : "-translate-y-full"}
         `}
@@ -118,8 +130,9 @@ export default function Navbar() {
               />
             </Link>
 
+            {/* Hamburger Button */}
             <motion.button
-              className="flex flex-col justify-center cursor-pointer lg:hidden"
+              className="flex flex-col justify-center cursor-pointer lg:hidden z-50 relative" // Added z-50 relative so it stays on top of menu
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               initial={false}
               animate={isMenuOpen ? "open" : "closed"}
@@ -232,24 +245,32 @@ export default function Navbar() {
       <AnimatePresence>
         {isMenuOpen && (
           <>
+            {/* Backdrop */}
             <motion.div
               className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
+              transition={{ duration: 0.4, ease: "easeInOut" }} // Smoother fade
               onClick={() => setIsMenuOpen(false)}
             />
 
+            {/* Sidebar */}
             <motion.div
-              className="fixed right-0 top-0 h-full w-80 bg-white shadow-2xl transform z-50 lg:hidden overflow-y-auto"
+              className="fixed right-0 top-0 h-full w-80 bg-white shadow-2xl z-50 lg:hidden overflow-y-auto"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              // REPLACED SPRING WITH TWEEN FOR SMOOTHNESS
+              transition={{
+                type: "tween",
+                duration: 0.4,
+                ease: smoothEase,
+              }}
             >
               <div className="flex flex-col p-6 h-full">
                 <div className="flex justify-end mb-8">
+                  {/* Close Button Inside Menu (Optional redundancy) */}
                   <motion.button
                     onClick={() => setIsMenuOpen(false)}
                     className="text-gray-600 hover:text-gray-900 p-2 rounded-full hover:bg-gray-100"
@@ -277,9 +298,13 @@ export default function Navbar() {
                   {navlinks.map((link, index) => (
                     <motion.div
                       key={link.linkName}
-                      initial={{ x: 50, opacity: 0 }}
+                      initial={{ x: 20, opacity: 0 }} // Reduced movement distance
                       animate={{ x: 0, opacity: 1 }}
-                      transition={{ delay: index * 0.1 }}
+                      transition={{
+                        delay: 0.1 + index * 0.1, // Added small base delay
+                        duration: 0.3,
+                        ease: "easeOut",
+                      }}
                     >
                       <Link
                         className={`text-lg font-medium transition-colors block py-2 ${
@@ -297,9 +322,9 @@ export default function Navbar() {
 
                   {/* Mobile Resources Dropdown */}
                   <motion.div
-                    initial={{ x: 50, opacity: 0 }}
+                    initial={{ x: 20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: navlinks.length * 0.1 }}
+                    transition={{ delay: 0.1 + navlinks.length * 0.1 }}
                   >
                     <button
                       className={`text-lg font-medium transition-colors flex items-center justify-between w-full py-2 ${
@@ -325,7 +350,7 @@ export default function Navbar() {
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3 }}
+                          transition={{ duration: 0.3, ease: "easeInOut" }}
                           className="overflow-hidden pl-4 mt-2 space-y-3"
                         >
                           {resourcesDropdown.map((item) => (
@@ -349,9 +374,9 @@ export default function Navbar() {
 
                   <div className="mt-auto space-y-4 pt-8">
                     <motion.div
-                      initial={{ x: 50, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{ delay: 0.5 }}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.4 }}
                     >
                       <Button
                         text={"Contact Us"}

@@ -28,17 +28,60 @@ export default function HeroSection() {
     setIsAutoPlaying(false);
   };
 
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  // Minimum distance (px) to be considered a swipe
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null); // Reset touch end on new touch
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      // Swipe Left -> Next Slide
+      if (currentSlide < images.length - 1) {
+        goToSlide(currentSlide + 1);
+      } else {
+        // Optional: Loop back to start
+        // goToSlide(0);
+      }
+    }
+
+    if (isRightSwipe) {
+      // Swipe Right -> Previous Slide
+      if (currentSlide > 0) {
+        goToSlide(currentSlide - 1);
+      } else {
+        // Optional: Loop to end
+        // goToSlide(images.length - 1);
+      }
+    }
+  };
+
   return (
     <section className="mt-32">
       <div className="max-w-[817px] mx-auto flex flex-col items-center px-4">
         <h1 className="text-[28px] lg:text-[46px] font-bold text-center">
           Co-Owned by <span className="text-secondary">Farmers</span>
         </h1>
-        <p className="mt-4 text-center text-[20px] lg:text-[24px] text-gray-700">
+        <p className="mt-4 text-center text-[20px] text-gray-700">
           Connecting Africa's farming communities to the training, finance, and
           markets they need to thrive.
         </p>
-        <button className="mt-6 rounded-[13px] py-[14.57px] px-[25.91px] bg-primary lg:rounded-2xl lg:py-[18px] lg:px-[32px] text-white text-[16px] lg:text-2xl hover:bg-primary/90 transition-colors cursor-pointer">
+        <button className="mt-6 rounded-[13px] py-[14.57px] px-[25.91px] bg-primary lg:rounded-2xl lg:px-[32px] text-white text-[16px] lg:text-[18px] hover:bg-primary/90 transition-colors cursor-pointer">
           Partner with Us
         </button>
       </div>
@@ -61,10 +104,14 @@ export default function HeroSection() {
           className="hidden lg:block absolute object-contain -top-25 -z-10 opacity-25 w-full"
         />
 
-        {/* Carousel on Mobile */}
         <div className="lg:hidden mt-16 relative max-w-6xl mx-auto px-4">
-          {/* Main Carousel Container */}
-          <div className="relative overflow-hidden rounded-[20px]">
+          {/* mobile carousel  with Touch Events */}
+          <div
+            className="relative overflow-hidden rounded-[20px]"
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+          >
             {/* Images */}
             <div
               className="flex transition-transform duration-700 ease-in-out"
@@ -76,13 +123,14 @@ export default function HeroSection() {
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover pointer-events-none"
                     />
                   </div>
                 </div>
               ))}
             </div>
           </div>
+
           {/* Dots Indicator */}
           <div className="flex mt-5 justify-center gap-1">
             {images.map((_, index) => (
