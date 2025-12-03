@@ -44,10 +44,10 @@ const footerData = {
     {
       title: "Our Resources",
       items: [
+        { label: "Gallery", href: "#" },
         { label: "Reports", href: "#" },
         { label: "FAQ's", href: "#" },
-        { label: "Gallery", href: "#" },
-        { label: "X Twitter", href: "#" },
+        { label: "Press Release", href: "#" },
       ],
     },
     {

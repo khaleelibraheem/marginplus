@@ -379,6 +379,7 @@ export default function Navbar() {
                       transition={{ delay: 0.4 }}
                     >
                       <Button
+                      onClick={handleLinkClick}
                         text={"Contact Us"}
                         bgColor={"transparent"}
                         textColor={"#014F2A"}

@@ -14,7 +14,7 @@ const stories = [
     image: "/images/story2.jpg",
     description:
       "“Marginplus has transformed our farming practices. We are now able to plan better and increase our yields significantly.”",
-    name: "Aisha Bello, Kano",
+    name: "Adamu Bello, Kano",
   },
   {
     image: "/images/story3.png",

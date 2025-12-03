@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Marquee from "../ui/Marquee";
+import Link from "next/link";
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -77,13 +78,14 @@ export default function HeroSection() {
         <h1 className="text-[28px] lg:text-[46px] font-bold text-center">
           Co-Owned by <span className="text-secondary">Farmers</span>
         </h1>
-        <p className="mt-4 text-center text-[20px] text-gray-700">
+        <p className="mt-4 text-center text-[20px] lg:text-2xl text-gray-700">
           Connecting Africa's farming communities to the training, finance, and
           markets they need to thrive.
         </p>
+    <Link href={"https://docs.google.com/forms/d/e/1FAIpQLSdxZPKbmCR5kmrAPOr6XJ9zw1uchEwnYJ-PkRIV9Yo0m4tArg/viewform"} target="_blank">
         <button className="mt-6 rounded-[13px] py-[14.57px] px-[25.91px] bg-primary lg:rounded-2xl lg:px-[32px] text-white text-[16px] lg:text-[18px] hover:bg-primary/90 transition-colors cursor-pointer">
           Partner with Us
-        </button>
+        </button></Link>
       </div>
 
       <div className="relative">
