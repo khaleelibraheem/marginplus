@@ -16,7 +16,7 @@ const footerData = {
         icon: "/images/linked.svg",
       },
        {
-        href: "https://www.instagram.com/marginplus_ng",
+        href: "https://www.instagram.com/marginplusgroup",
         icon: "/images/instagram.svg",
       },
       {
@@ -24,7 +24,7 @@ const footerData = {
         icon: "/images/facebook.svg",
       },
       {
-        href: "https://x.com/marginplus_ng",
+        href: "https://x.com/marginplusgroup",
         icon: "/images/x.svg",
       },
      
@@ -55,16 +55,16 @@ const footerData = {
       items: [
         {
           label: "LinkedIn",
-          href: "#",
+          href: "https://www.linkedin.com/company/marginplusgroup/",
           external: true,
         },
-        { label: "Facebook", href: "#" },
+        { label: "Facebook", href: "https://www.facebook.com/marginplusgrp" },
         {
           label: "Instagram",
-          href: "#",
+          href: "https://www.instagram.com/marginplusgroup",
           external: true,
         },
-        { label: "X Twitter", href: "#" },
+        { label: "X Twitter", href: "https://x.com/marginplusgroup" },
       ],
     },
   ],
