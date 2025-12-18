@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #014f2a;
+  --color-secondary: #008647;
+  --animate-marquee: marquee 25s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .bg-vector-lines {
+  background-image: url("/images/vector-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .bg-vector-lines {
+    background-image: url("/images/vector.svg");
+     background-position: right;
+     width: 70%;
+  }
+}
+
+.bg-arrow {
+  background-image: url("/images/logo-arrow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  opacity: 1;
+}
+
+.primary-btn {
+  background: linear-gradient(90deg, rgba(0, 77, 46, 1) 0%, rgba(0, 168, 89, 1) 100%);
+} */
+
+button {
+  cursor: pointer;
+}
+
+.app-input {
+  height: 100%;
+  width: 100%;
+  padding: 3px 10px 0px 10px;
+  border-radius: 8px;
+  outline: none;
+  font-family: "gilroy";
+  font-weight: 400;
+}
+
+/* .app-input.app-phone {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+} */
