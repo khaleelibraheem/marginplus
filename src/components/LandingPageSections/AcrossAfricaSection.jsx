@@ -30,7 +30,7 @@ export default function AcrossAfricaSection() {
           </h2>
           <div className="w-[312px] bg-[#B2FF96] h-[4px] rounded-[40px] mt-5"></div>
           <p className="text-[20px] lg:text-2xl text-gray-700 mt-4">
-            We organize communities into structured <br className="sm:hidden" />{" "}
+            We organize communities into structured 
             clusters, giving them the tools, support, and confidence to farm
             with purpose and succeed every season.
           </p>
